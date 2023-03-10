@@ -1,0 +1,20 @@
+﻿.innerpara{
+    font-size:17px;
+}
+
+#content-home{
+    margin-left:23px;
+    margin-right:40px;
+}
+.model{
+    position:fixed;
+    top:20px;
+    right:20px;
+    left:20px;
+    width:auto;
+    margin:0;
+    overflow:hidden;
+    z-index:1050;
+    outline:0;
+    margin:-20px 0 0 -20px;
+}

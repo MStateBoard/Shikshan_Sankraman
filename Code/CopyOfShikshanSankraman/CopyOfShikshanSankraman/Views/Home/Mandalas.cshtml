@@ -1,0 +1,147 @@
+﻿@model CopyOfShikshanSankraman.Models.Tbl_Mandal
+@{
+    ViewBag.Title = "Mandalas";
+}
+@*<link href="~/Design/Mandalas/mandalasstyle.css" rel="stylesheet" />*@
+
+
+
+<style>
+    /*form{
+        display:block;
+        margin-top:0em;
+        margin-block-end:1em;
+    }*/
+    .row{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    label{
+        display:block;
+        max-width:100%;
+        margin-bottom:5px;
+        font-weight:700;
+    }
+    input[type="text"] {
+        height: 30px;
+        width: 210px;
+    }
+</style>
+<h3 style="text-align:center">मंडळास</h3>
+@if (TempData["Msg"] != null)
+{
+    <h4 style="color:red">@TempData["Msg"].ToString()</h4>
+}
+<br />
+@using (Html.BeginForm("Mandalas", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="container">
+
+        <div class="row" style="padding-left:100px;">
+            <div class="col-md-3">
+                <br />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ino, "सांकेतिक क्रमांक :", htmlAttributes: new { @class = "control-label" })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.ino, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ino, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <label>अंक कधी पासून प्राप्त झाला नाही वर्ष निवडा</label>
+                
+                
+                <span class="required" style="color:red;font-weight:bold">*</span>
+                <br />
+                @Html.DropDownListFor(model => model.year, new List<SelectListItem>
+                       {
+                           new SelectListItem { Text = "२०२१  ", Value = "२०२१ "},
+                           new SelectListItem { Text = "२०२०", Value = "२०२०"},
+                           new SelectListItem { Text = "२०१९", Value = "२०१९"},
+                           new SelectListItem { Text = "२०१८", Value = "२०१८"},
+                           new SelectListItem { Text = "२०१७", Value = "२०१७"},
+                           new SelectListItem { Text = "२०१६ ", Value = "२०१६ "},
+                           new SelectListItem { Text = "२०१५", Value = "२०१५"},
+
+
+                        }, "-Select-", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+                @Html.ValidationMessageFor(model => model.year, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="col-md-3">
+                <br />
+                <label>महिना निवडा</label>
+                <span class="required" style="color:red;font-weight:bold">*</span>
+                <br />
+                @Html.DropDownListFor(model => model.month, new List<SelectListItem>
+                       {
+                           new SelectListItem { Text = "जानेवारी  ", Value = "जानेवारी "},
+                           new SelectListItem { Text = "फेब्रुवारी", Value = "फेब्रुवारी"},
+                           new SelectListItem { Text = "मार्च", Value = "मार्च"},
+                           new SelectListItem { Text = "एप्रिल", Value = "एप्रिल"},
+                           new SelectListItem { Text = "मे", Value = "मे"},
+                           new SelectListItem { Text = "जून ", Value = "जून "},
+                           new SelectListItem { Text = "जुलै", Value = "जुलै"},
+                           new SelectListItem { Text = "ऑगस्ट", Value = "ऑगस्ट"},
+                           new SelectListItem { Text = "सप्टेंबर ", Value = "सप्टेंबर "},
+                           new SelectListItem { Text = "ऑक्टोबर", Value = "ऑक्टोबर"},
+                           new SelectListItem { Text = "नोव्हेंबर", Value = "नोव्हेंबर"},
+                           new SelectListItem { Text = "डिसेंबर ", Value = "डिसेंबर "},
+               }, "-Select-", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+                @Html.ValidationMessageFor(model => model.month, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="col-md-3">
+                <br />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.address, "पत्र व्यवहाराचा पूर्ण पत्ता :", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.address, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="form-horizontal ">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <br /> <br /> <br />
+        <div class="form-group" align="center">
+
+            <div class="form-group">
+                <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" value="submit" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

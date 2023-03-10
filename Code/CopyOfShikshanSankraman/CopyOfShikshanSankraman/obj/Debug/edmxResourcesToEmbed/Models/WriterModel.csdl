@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WriterDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Writer_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AadharNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LekhachaVishay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShaikshanikPatrata" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KaryalayachaPrakar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VyavasaikSthan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LekhPrakashanStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Anubhav" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KaryaratSthal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrakashitLekh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrakashitKashyamadhe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Vishay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AavadichaVishay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="WriterDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Writer_tbl" EntityType="Self.Writer_tbl" />
+  </EntityContainer>
+</Schema>

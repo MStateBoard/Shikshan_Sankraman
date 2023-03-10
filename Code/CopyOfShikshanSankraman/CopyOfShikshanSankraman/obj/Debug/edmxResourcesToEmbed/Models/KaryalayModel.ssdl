@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KaryalayDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Karyalay_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vargadar" Type="varchar" MaxLength="50" />
+    <Property Name="SurnameOfHead" Type="varchar" MaxLength="50" />
+    <Property Name="Nav" Type="varchar" MaxLength="50" />
+    <Property Name="VadilancheNav" Type="varchar" MaxLength="50" />
+    <Property Name="KaryalayacheNav" Type="varchar" MaxLength="50" />
+    <Property Name="GharNav" Type="varchar" MaxLength="50" />
+    <Property Name="RoadName" Type="varchar" MaxLength="50" />
+    <Property Name="NearMark" Type="varchar" MaxLength="50" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" />
+    <Property Name="Taluka" Type="varchar" MaxLength="50" />
+    <Property Name="Jhila" Type="varchar" MaxLength="50" />
+    <Property Name="PincodeNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+    <Property Name="Vargani" Type="varchar" MaxLength="50" />
+    <Property Name="MonthStart" Type="varchar" MaxLength="50" />
+    <Property Name="MonthEnd" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="KaryalayDbModelStoreContainer">
+    <EntitySet Name="Karyalay_tbl" EntityType="Self.Karyalay_tbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

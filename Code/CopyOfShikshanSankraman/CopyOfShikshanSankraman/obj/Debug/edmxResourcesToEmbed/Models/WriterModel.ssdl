@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WriterDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Writer_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="AadharNo" Type="varchar" MaxLength="100" />
+    <Property Name="LekhachaVishay" Type="varchar" MaxLength="50" />
+    <Property Name="ShaikshanikPatrata" Type="varchar" MaxLength="50" />
+    <Property Name="KaryalayachaPrakar" Type="varchar" MaxLength="50" />
+    <Property Name="VyavasaikSthan" Type="varchar" MaxLength="50" />
+    <Property Name="LekhPrakashanStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Anubhav" Type="varchar" MaxLength="50" />
+    <Property Name="KaryaratSthal" Type="varchar" MaxLength="50" />
+    <Property Name="PrakashitLekh" Type="varchar" MaxLength="50" />
+    <Property Name="PrakashitKashyamadhe" Type="varchar" MaxLength="50" />
+    <Property Name="Vishay" Type="varchar" MaxLength="50" />
+    <Property Name="AavadichaVishay" Type="varchar" MaxLength="50" />
+    <Property Name="Payment" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="WriterDbModelStoreContainer">
+    <EntitySet Name="Writer_tbl" EntityType="Self.Writer_tbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

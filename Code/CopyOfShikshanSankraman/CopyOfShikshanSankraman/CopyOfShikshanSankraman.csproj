@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A953A5CC-302A-4B35-B9A0-D34C50DBC99E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CopyOfShikshanSankraman</RootNamespace>
+    <AssemblyName>CopyOfShikshanSankraman</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44356</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=6.0.5.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.0.5\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.0.0\lib\net452\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.0.0\lib\net452\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="MCPG.CCA.Util">
+      <HintPath>C:\Users\msbshse4\Downloads\Integration_kits\Web Integration Kits\Web Integration Kits\ASP.Net\ASP.Net_Kit_Version_3.5\NON_SEAMLESS_KIT\libs\MCPG.CCA.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.5.0.16\lib\net461\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.1\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ccavRequestHandler.aspx.cs">
+      <DependentUpon>ccavRequestHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ccavRequestHandler.aspx.designer.cs">
+      <DependentUpon>ccavRequestHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ccavResponseHandler.aspx.cs">
+      <DependentUpon>ccavResponseHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ccavResponseHandler.aspx.designer.cs">
+      <DependentUpon>ccavResponseHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin_tbl1.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ANK_Model.cs" />
+    <Compile Include="Models\Contact_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mahavidyalaya_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewChitrakar_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewDatabaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewDatabaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewDatabaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewDatabaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewDatabaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewKaryalay_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewVarganidar_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewWriter_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pratikriya_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registration_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\School_tbl.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Mandal.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_payment.cs">
+      <DependentUpon>NewDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ccavRequestHandler.aspx" />
+    <Content Include="ccavResponseHandler.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="dataForm2.html" />
+    <Content Include="dataFrom.htm" />
+    <Content Include="Design\Admin\AdminHomepage.css" />
+    <Content Include="Design\ChitrakarPage\CStyleSheet1.css" />
+    <Content Include="Design\CSS\bootstrap.css" />
+    <Content Include="Design\CSS\JQueryFile.js" />
+    <Content Include="Design\CSS\navstyle.css" />
+    <Content Include="Design\CSS\owl.carousel.min.css" />
+    <Content Include="Design\CSS\owl.carousel.min.js" />
+    <Content Include="Design\CSS\owl.theme.default.min.css" />
+    <Content Include="Design\CSS\reset.css" />
+    <Content Include="Design\CSS\script.js" />
+    <Content Include="Design\CSS\style.css" />
+    <Content Include="Design\CSS\StyleSheet1.css" />
+    <Content Include="Design\homepage\homepage.css" />
+    <Content Include="Design\Images\1.jpg" />
+    <Content Include="Design\Images\10.JPG" />
+    <Content Include="Design\Images\11.JPG" />
+    <Content Include="Design\Images\12.JPG" />
+    <Content Include="Design\Images\13.JPG" />
+    <Content Include="Design\Images\14.JPG" />
+    <Content Include="Design\Images\15.JPG" />
+    <Content Include="Design\Images\2.jpg" />
+    <Content Include="Design\Images\3.jpg" />
+    <Content Include="Design\Images\4.JPG" />
+    <Content Include="Design\Images\5.JPG" />
+    <Content Include="Design\Images\6.JPG" />
+    <Content Include="Design\Images\7.JPG" />
+    <Content Include="Design\Images\8.JPG" />
+    <Content Include="Design\Images\9.JPG" />
+    <Content Include="Design\Images\environment.png" />
+    <Content Include="Design\Images\images.jpg" />
+    <Content Include="Design\Images\MSBSHSE-LOGO.png" />
+    <Content Include="Design\Images\newzoom.png" />
+    <Content Include="Design\Images\play-2.png" />
+    <Content Include="Design\Images\section-video-left.png" />
+    <Content Include="Design\Images\section-video-play.png" />
+    <Content Include="Design\Images\section-video-right.png" />
+    <Content Include="Design\Karyalay\Karyalay.css" />
+    <Content Include="Design\Kshanchitre\kshanchitre.css" />
+    <Content Include="Design\LekhakPage\smily.png" />
+    <Content Include="Design\LekhakPage\WriterInside.css" />
+    <Content Include="Design\LekhakPage\WriterStyle.css" />
+    <Content Include="Design\MadhyamikShala\StyleSheet1.css" />
+    <Content Include="Design\Mandalas\mandalasstyle.css" />
+    <Content Include="Design\NewCarsoul\jcarcoul.css" />
+    <Content Include="Design\NewCarsoul\jcarsoul.ajax.js" />
+    <Content Include="Design\NewCarsoul\jcarsoul.min.js" />
+    <Content Include="Design\NewCarsoul\jquery.js" />
+    <Content Include="Design\NewCarsoul\newjsfile.js" />
+    <Content Include="Design\NewCarsoul\style.css" />
+    <Content Include="Design\Postas\postas.css" />
+    <Content Include="Design\Pratikriya\pratikriya.css" />
+    <Content Include="Design\ResponsiveSiteCss\jquery.mCustomScrollbar.css" />
+    <Content Include="Design\ResponsiveSiteCss\thickbox.css" />
+    <Content Include="Design\ResponsiveSiteCss\usquare_style.css" />
+    <Content Include="Design\SamparkPage\StyleSheet.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\menu\menu-arrow-dark.png" />
+    <Content Include="images\menu\menu-arrow.png" />
+    <Content Include="images\menu\menu-select-arrow.png" />
+    <Content Include="Models\NewDatabaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>NewDatabaseModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\NewDatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>NewDatabaseModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\NewDatabaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewDatabaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\NewDatabaseModel.edmx.diagram">
+      <DependentUpon>NewDatabaseModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Design\Images\January Sanraman 2022.pdf" />
+    <Content Include="Design\CSS\chitrakar.pdf" />
+    <Content Include="Design\CSS\lekhak.pdf" />
+    <Content Include="Design\CSS\post.pdf" />
+    <Content Include="Payment\Success.cshtml" />
+    <Content Include="Payment\Failure.cshtml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="styles\colorbox.css" />
+    <Content Include="styles\comment-reply.min.js" />
+    <Content Include="styles\contact.js" />
+    <Content Include="styles\contact_form.css" />
+    <Content Include="styles\custom.css" />
+    <Content Include="styles\flash.css" />
+    <Content Include="styles\hoverIntent.min.js" />
+    <Content Include="styles\jQuery.BlackAndWhite.js" />
+    <Content Include="styles\jquery.carouFredSel-6.1.0-packed.js" />
+    <Content Include="styles\jquery.clickout.min.js" />
+    <Content Include="styles\jquery.colorbox-min.js" />
+    <Content Include="styles\jquery.custom.js" />
+    <Content Include="styles\jquery.cycle.min.js" />
+    <Content Include="styles\jquery.easing.js" />
+    <Content Include="styles\jquery.flexslider-min.js" />
+    <Content Include="styles\jquery.js" />
+    <Content Include="styles\jquery.masonry.min.js" />
+    <Content Include="styles\jquery.mCustomScrollbar.css" />
+    <Content Include="styles\jquery.placeholder.js" />
+    <Content Include="styles\jquery.polaroid.js" />
+    <Content Include="styles\jquery.preloader.js" />
+    <Content Include="styles\jquery.superfish.js" />
+    <Content Include="styles\jquery.tipsy.js" />
+    <Content Include="styles\jquery.touchSwipe.min.js" />
+    <Content Include="styles\jquery.transform-0.8.0.min.js" />
+    <Content Include="styles\media-upload.min.js" />
+    <Content Include="styles\mobilemenu.js" />
+    <Content Include="styles\new\piecemaker.css" />
+    <Content Include="styles\new\piecemaker.swf" />
+    <Content Include="styles\new\piecemaker.xml" />
+    <Content Include="styles\responsive.css" />
+    <Content Include="styles\responsive.js" />
+    <Content Include="styles\section-video-left.png" />
+    <Content Include="styles\section-video-right.png" />
+    <Content Include="styles\shortcodes.css" />
+    <Content Include="styles\shortcodes.js" />
+    <Content Include="styles\stylesheet.css" />
+    <Content Include="styles\stylesheetsame - Copy.css" />
+    <Content Include="styles\swfobject.js" />
+    <Content Include="styles\thickbox.css" />
+    <Content Include="styles\underscore.min.js" />
+    <Content Include="styles\usquare_style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Writer.cshtml" />
+    <Content Include="Views\Home\WriterInside.cshtml" />
+    <Content Include="Views\Home\Chitrakar.cshtml" />
+    <Content Include="Views\Home\ChitrakarInside.cshtml" />
+    <Content Include="Views\Home\Mahavidyalaya.cshtml" />
+    <Content Include="Views\Home\Varganidar.cshtml" />
+    <Content Include="Views\Home\Karyalay.cshtml" />
+    <Content Include="Views\Home\MadhyamikShala.cshtml" />
+    <Content Include="Views\Home\Pratikriya.cshtml" />
+    <Content Include="Views\Home\Postas.cshtml" />
+    <Content Include="Views\Home\Kshanchitre.cshtml" />
+    <Content Include="Views\Home\Mandalas.cshtml" />
+    <Content Include="Views\Admin\Homepage.cshtml" />
+    <Content Include="Views\Admin\AdminList.cshtml" />
+    <Content Include="Views\Home\ChitrakarList.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Registration.cshtml" />
+    <Content Include="Views\Home\WriterList.cshtml" />
+    <Content Include="Views\Login\WriterList.cshtml" />
+    <Content Include="Views\Login\ChitrakarList.cshtml" />
+    <Content Include="Views\Login\MadhyamikShalaList.cshtml" />
+    <Content Include="Views\Login\MahavidyalayaList.cshtml" />
+    <Content Include="Views\Login\KarayalayList.cshtml" />
+    <Content Include="Views\Login\VaraganidarList.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Login\Login_Dashboard.cshtml" />
+    <Content Include="Views\Shared\LoginLayout.cshtml" />
+    <Content Include="Views\Home\demo.cshtml" />
+    <Content Include="Views\Payment\Success.cshtml" />
+    <Content Include="Views\Shared\PaymentLayout.cshtml" />
+    <Content Include="Views\Payment\Failure.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="DownloadedFiles\Chitra\" />
+    <Folder Include="DownloadedFiles\Lekh\" />
+    <Folder Include="DownloadedFiles\Photo\" />
+    <Folder Include="Upload\Image\" />
+    <Folder Include="Upload\PDF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55584</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44356/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

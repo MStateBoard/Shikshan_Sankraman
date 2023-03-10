@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WriterDbModelStoreContainer" CdmEntityContainer="WriterDbEntities">
+    <EntitySetMapping Name="Writer_tbl">
+      <EntityTypeMapping TypeName="WriterDbModel.Writer_tbl">
+        <MappingFragment StoreEntitySet="Writer_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+          <ScalarProperty Name="LekhachaVishay" ColumnName="LekhachaVishay" />
+          <ScalarProperty Name="ShaikshanikPatrata" ColumnName="ShaikshanikPatrata" />
+          <ScalarProperty Name="KaryalayachaPrakar" ColumnName="KaryalayachaPrakar" />
+          <ScalarProperty Name="VyavasaikSthan" ColumnName="VyavasaikSthan" />
+          <ScalarProperty Name="LekhPrakashanStatus" ColumnName="LekhPrakashanStatus" />
+          <ScalarProperty Name="Anubhav" ColumnName="Anubhav" />
+          <ScalarProperty Name="KaryaratSthal" ColumnName="KaryaratSthal" />
+          <ScalarProperty Name="PrakashitLekh" ColumnName="PrakashitLekh" />
+          <ScalarProperty Name="PrakashitKashyamadhe" ColumnName="PrakashitKashyamadhe" />
+          <ScalarProperty Name="Vishay" ColumnName="Vishay" />
+          <ScalarProperty Name="AavadichaVishay" ColumnName="AavadichaVishay" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

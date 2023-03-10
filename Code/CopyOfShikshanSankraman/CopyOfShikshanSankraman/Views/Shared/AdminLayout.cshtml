@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" media="all" href="~/Design/CSS/bootstrap.css" />
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="~/Design/CSS/reset.css" />
+    <!-- MAIN THEME STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="~/Design/CSS/style.css" />
+
+
+
+
+    <!-- [favicon] end -->
+    <!-- Touch icons more info: http://mathiasbynens.be/notes/touch-icons -->
+    <!-- For iPad3 with retina display: -->
+
+
+    <link rel='stylesheet' id='thickbox-css' href='~/styles/thickbox.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='usquare-css-css' href='~/styles/usquare_style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='customScroll-css-css' href='~/styles/jquery.mCustomScrollbar.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='customfont1-css' href='~/styles/stylesheet.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='customfont2-css' href='~/styles/stylesheetsame - Copy.css' type='text/css' media='all' />
+
+    @*<link rel='stylesheet' id='google-fonts-css' href='http://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans+Condensed%3A300%7COpen+Sans%7CShadows+Into+Light%7CMuli%7CDroid+Sans%7CArbutus+Slab%7CAbel&#038;ver=3.5.1' type='text/css' media='all' />*@
+    <link rel='stylesheet' id='responsive-css' href='~/styles/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='polaroid-slider-css' href='~/styles/flash.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='colorbox-css' href='~/styles/colorbox.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ahortcodes-css' href='~/styles/shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-css' href='~/styles/contact_form.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='custom-css' href='~/styles/custom.css' type='text/css' media='all' />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='~/styles/jquery.js'></script>
+
+
+
+    <style>
+        /*/////////////////NavBar///////////////////////////////////////*/
+        
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #152f49;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                padding: 8px;
+                color: white;
+            }
+
+        select {
+            color: white;
+            border: none;
+            width: 100px;
+            margin-top: 2px;
+            background-color: #152f49;
+        }
+    </style>
+    <script>
+        function SelectRedirect() {
+
+
+            switch (document.getElementById('s1').value) {
+                case "शाळा":
+                    window.location = "../Login/MadhyamikShalaList";
+                    break;
+
+                case "महाविद्यालय":
+                    window.location = "../Login/MahavidyalayaList";
+                    break;
+
+                case "कार्यालय":
+                    window.location = "../Login/KarayalayList";
+                    break;
+                case "वर्गणीदार":
+                    window.location = "../Login/VaraganidarList";
+                    break;
+
+                
+                default:
+                    window.location = "../";
+                    break;
+            }
+        }
+        //////////////////
+    </script>
+</head>
+<body class="home page no_js responsive stretched">
+    <div class="bg-shadow">
+        <!-- START WRAPPER -->
+        <div id="wrapper" class="container group">
+            <div id="header" style="margin-bottom:0" class="group margin-bottom">
+
+                <div class="row" id="logo-headersidebar-container">
+                    <!-- START LOGO -->
+                    <div class="group container">
+                        <div id="logo" class="span2 group">
+                            <a class="msb-img" id="logo-img"><img src="~/Design/Images/MSBSHSE-LOGO.png" /> </a>
+                        </div>
+
+                        <div align="center" class="span9 group">
+                            <h1 style="padding-top:15px; color:white" class="titleh1"> शिक्षण संक्रमन</h1>
+                            <h3 style="color:white" class="titleh3">महाराष्ट्र  राज्य माध्यमिक व उच्च्य माध्यमिक शिक्षण मंडल</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <ul>
+                <li class="inc"><a href="../Login/WriterList">लेखक यादी</a></li>
+                <li class="inc"><a href="../Login/ChitrakarList">चित्रकार यादी</a></li>
+                <li>
+                    <SELECT id="s1" NAME="section" onChange="SelectRedirect();">
+                        <Option> पेमेंट यादी </Option>
+                        <Option value="शाळा">माध्यमिक शाळा</Option>
+                        <Option value="महाविद्यालय">कनिष्ट महाविद्यालय/उच्च्य माध्यमिक  शाळा</Option>
+                        <Option value="कार्यालय">कार्यालय</Option>
+                        <Option value="वर्गणीदार">वयक्तिक वर्गणीदार</Option>
+                        
+                    </SELECT>
+                </li>
+                <li style="float:right; margin-right:40px;"><a href="../Login/Login">LOG OUT</a></li>
+
+            </ul>
+          
+
+
+            <!--startpanel-->
+
+
+            @RenderBody()
+
+
+            <script type='text/javascript' src='~/styles/comment-reply.min.js'></script>
+            <script type='text/javascript' src='~/styles/underscore.min.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.masonry.min.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.polaroid.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.colorbox-min.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.easing.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.flexslider-min.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.carouFredSel-6.1.0-packed.js'></script>
+            <script type='text/javascript' src='~/styles/jQuery.BlackAndWhite.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.touchSwipe.min.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.transform-0.8.0.min.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.preloader.js'></script>
+            <script type='text/javascript' src='~/styles/swfobject.js'></script>
+            <script type='text/javascript' src='~/styles/hoverIntent.min.js'></script>
+            <script type='text/javascript' src='~/styles/media-upload.min.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.clickout.min.js'></script>
+            <script type='text/javascript' src='~/styles/responsive.js'></script>
+            <script type='text/javascript' src='~/styles/mobilemenu.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.superfish.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.placeholder.js'></script>
+            <script type='text/javascript' src='~/styles/contact.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.tipsy.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.cycle.min.js'></script>
+            <script type='text/javascript' src='~/styles/shortcodes.js'></script>
+            <script type='text/javascript' src='~/styles/jquery.custom.js'></script>
+
+            @*<script type="text/javascript">
+                    var flashvars = {};
+                    flashvars.cssSource = "styles/new/piecemaker.css";
+                    flashvars.xmlSource = "styles/new/piecemaker.xml";
+
+                    var flash_params = {};
+                    flash_params.play = "true";
+                    flash_params.menu = "false";
+                    flash_params.scale = "scale";
+                    flash_params.wmode = "transparent";
+                    flash_params.allowfullscreen = "true";
+                    flash_params.allowscriptaccess = "always";
+                    flash_params.allownetworking = "all";
+
+                    swfobject.embedSWF('styles/new/piecemaker.swf', 'piecemaker', '100%', '100%', '10', null, flashvars, flash_params, null);
+
+                    jQuery(document).ready(function ($) {
+                        var ResizeFlash = function () {
+                            var main_width = $('#slider-flash-0').width();
+                            var initial_height = 453;
+
+                            $(".slider-wrapper").css("width", main_width);
+                            $(".slider-wrapper").css("height", (initial_height * main_width) / 1170);
+                        }
+                        ResizeFlash();
+                        $(window).resize(ResizeFlash);
+                    });
+                </script>*@
+        </div>
+    </div>
+    
+</body>
+</html>

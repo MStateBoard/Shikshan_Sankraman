@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MahavidyalayaDbModelStoreContainer" CdmEntityContainer="MahavidyalayaDbEntities">
+    <EntitySetMapping Name="Mahavidyalaya_tbl">
+      <EntityTypeMapping TypeName="MahavidyalayaDbModel.Mahavidyalaya_tbl">
+        <MappingFragment StoreEntitySet="Mahavidyalaya_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Vargadar" ColumnName="Vargadar" />
+          <ScalarProperty Name="SansthecheNav" ColumnName="SansthecheNav" />
+          <ScalarProperty Name="MahavidyalayacheNav" ColumnName="MahavidyalayacheNav" />
+          <ScalarProperty Name="SansthechaPatta" ColumnName="SansthechaPatta" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="IndexNo" ColumnName="IndexNo" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+          <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+          <ScalarProperty Name="Vargani" ColumnName="Vargani" />
+          <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+          <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

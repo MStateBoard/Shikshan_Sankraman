@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NewWriter_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AadharNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LekhachaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShaikshanikPatrata" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KaryalayachaPrakar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VyavasaikSthan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LekhPrakashanStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Anubhav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KaryaratSthal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PrakashitLekh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PrakashitKashyamadhe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Vishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AavadichaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SamtiPatra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lekh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Font" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="NewDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NewWriter_tbl" EntityType="Self.NewWriter_tbl" />
+    <EntitySet Name="NewChitrakar_tbl" EntityType="NewDatabaseModel.NewChitrakar_tbl" />
+    <EntitySet Name="School_tbl" EntityType="NewDatabaseModel.School_tbl" />
+    <EntitySet Name="Mahavidyalaya_tbl" EntityType="NewDatabaseModel.Mahavidyalaya_tbl" />
+    <EntitySet Name="NewVarganidar_tbl" EntityType="NewDatabaseModel.NewVarganidar_tbl" />
+    <EntitySet Name="Pratikriya_tbl" EntityType="NewDatabaseModel.Pratikriya_tbl" />
+    <EntitySet Name="Contact_tbl" EntityType="NewDatabaseModel.Contact_tbl" />
+    <EntitySet Name="Admin_tbl1" EntityType="NewDatabaseModel.Admin_tbl1" />
+    <EntitySet Name="Tbl_payment" EntityType="NewDatabaseModel.Tbl_payment" />
+    <EntitySet Name="NewKaryalay_tbl" EntityType="NewDatabaseModel.NewKaryalay_tbl" />
+    <EntitySet Name="Tbl_Mandal" EntityType="NewDatabaseModel.Tbl_Mandal" />
+    <EntitySet Name="Registration_tbl" EntityType="NewDatabaseModel.Registration_tbl" />
+  </EntityContainer>
+  <EntityType Name="NewChitrakar_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AadharNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChitrachaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShaikshanikPatrata" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KaryalayachaPrakar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VyavasayikSthan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChitraPrakashanStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Anubhav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KaryaratSthal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PrakashitChitra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PrakashitKashyamadhe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Vishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AavadichaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SamtiPatra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Chitra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Chitra2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="School_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vargadar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SansthecheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SansthechaPatta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolAdd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IndexNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VarganiDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Vargani" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Mahavidyalaya_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vargadar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SansthecheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MahavidyalayacheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SansthechaPatta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IndexNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VarganiDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Vargani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="NewVarganidar_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GharNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RoadName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NearMark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VarganiDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AadharCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Varagani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pratikriya_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Education" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Varsh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mahine" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pratikriya" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Admin_tbl1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Month" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="0" />
+    <Property Name="PdfUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_payment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tracking_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bank_ref_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="order_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="failure_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payment_mode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="card_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="currency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount_money" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_zip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_zip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="merchant_param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="merchant_param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="merchant_param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="merchant_param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="merchant_param5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vault" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="offer_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="offer_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="discount_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mer_account" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="eci_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="retry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="response_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billing_notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="trans_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bin_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NewKaryalay_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vargadar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SurnameOfHead" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Nav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VadilancheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KaryalayacheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GharNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RoadName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NearMark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VarganiDate" Type="DateTime" Precision="0" />
+    <Property Name="Vargani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Tbl_Mandal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ino" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="month" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Registration_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

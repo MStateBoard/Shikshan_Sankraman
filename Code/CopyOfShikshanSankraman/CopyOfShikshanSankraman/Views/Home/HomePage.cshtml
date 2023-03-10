@@ -1,0 +1,627 @@
+﻿@model CopyOfShikshanSankraman.Models.ANK_Model
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+@*Example assets*@
+@*<link rel="stylesheet" type="text/css" href="~/styles/style1.css">
+    <link rel="stylesheet" type="text/css" href="~/styles/jcarcoul.css">
+
+    <script type="text/javascript" src="~/styles/jquery1.js"></script>
+    <script type="text/javascript" src="~/styles/jcarsoul.min.js"></script>
+    <script type="text/javascript" src="~/styles/jcarsoul.ajax.js"></script>*@
+
+
+<style>
+
+        /* Text alignment for body */
+        body {
+            text-align: center;
+        }
+
+        /* Styling h1 tag */
+        h1 {
+            color: green;
+            text-align: center;
+        }
+
+        /* Styling modal */
+        .modal:before {
+            content: '';
+            display: inline-block;
+           /* height: 100%;*/
+            vertical-align: middle;
+        }
+
+        .modal-dialog {
+            display: inline-block;
+            vertical-align: middle;
+        }
+   /* iframe {
+        border-width: 2px;
+        border-style: inset;
+        border-color: initial;
+        border-image: initial;
+    }*/
+        .modal .modal-content {
+            padding: 20px 20px 20px 20px;
+            -webkit-animation-name: modal-animation;
+            -webkit-animation-duration: 0.5s;
+            animation-name: modal-animation;
+            animation-duration: 0.5s;
+        }
+
+        @@-webkit-keyframes modal-animation {
+            from {
+                top: -100px;
+                opacity: 0;
+            }
+            to {
+                top: 0px;
+                opacity: 1;
+            }
+        }
+
+        @@keyframes modal-animation {
+            from {
+                top: -100px;
+                opacity: 0;
+            }
+            to {
+                top: 0px;
+                opacity: 1;
+            }
+        }
+</style>
+
+<div id="UpdatePanel1 primary" class="sidebar-no">
+    <div class="slogan">
+        <h3 style="font-weight: bold; color: #0d4167;">महाराष्ट्र  राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळाच्या 'शिक्षण संक्रमण' वेबसाईट वर आपले स्वागत....!</h3>
+    </div>
+    <div id="primary" class="sidebar-right">
+        <div class="container group">
+            <div class="row">
+
+                <div id="content-home" class="content group">
+                    <div class="innerpara">
+                        "महाराष्ट्र  राज्य  माध्यमिक व उच्च माध्यमिक शिक्षण मंडळाकडून दरमहा 'शिक्षण संक्रमण' शैक्षणिक मासिक प्रकाशित केले जाते.
+                        या मासिकाचे  राज्यातील
+
+                        माध्यमिक व उच्च माध्यमिक शाळा, कनिष्ठ महाविद्यालये वर्ग़णीदार आहेत. तसेच शिक्षक, पालक,
+                        विद्यार्थी  इत्यादी  मोठ्या प्रमाणावर
+                        वर्ग़णीदार  आहेत. या मासिकातून शिक्षणक्षेत्राशी  संबंधित लेख ,शाळांचे  नाविन्यपूर्ण  उपक्रम ,
+                        दिनविशेष यांवर  आधारित लेख व माहिती तसेच
+
+                        पुनर्रचित  अभ्यासक्रम , मूल्यमापन पध्दती,  शैक्षणिक  तत्त्वज्ञानावर  विचारप्रवर्तक लेख , अभ्यासक्रमासंदर्भातील   बदल, अध्यापन पध्द्ती,
+                        परीक्षा पध्द्ती , परिपत्रके , शाळा-कनिष्ठ  महाविद्यालयांशी संबंधित शासन निर्णय इत्यादी प्रसिध्द केले  जातात.
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*-end  of  Info. content on Update panel-*@
+
+    <div id="primary" class="sidebar-right">
+        <div class="container group">
+            <div class="row">
+
+                <div class="extra-content margin-top group span12">
+                    <div class="border-line"></div>
+                    <div class="section portfolio">
+                        <section>
+                            <div class="sect-div" style="font-weight:bold; color:black; text-align:left; margin-left:5px;">अंक 2022</div>
+                            <div class="portfolio-projects section-portfolio-slider3 margin-bottom">
+                                <a class="prev span1" href="#">
+                                    <img src="../Design/Images/section-video-left.png" />
+                                </a>
+                                <div class="section-portfolio-carousel span10">
+                                    <ul class="section-portfolio-slides3">
+                                        @foreach (var obj in Model.Year_2022)
+                                        {
+                                            <li class="work span2">
+
+                                                <div class="img">
+                                                    <img id="myImg" width="162" height="90" src="@obj.Image" onclick="Call_Model('@obj.PdfUrl');" />
+                                                </div>
+
+                                                <div style="text-align: center; font-weight:bold; color:black; " onclick="Call_Model('@obj.PdfUrl');">@obj.Month</div>
+
+                                            </li>
+                                        }
+
+
+
+                                    </ul>
+                                </div>
+                                <a class="next span1" href="#"><img src="../Design/Images/section-video-right.png" /></a>
+                                <div class="clear"></div>
+                            </div>
+                        </section>
+                        <script type="text/javascript">
+
+                            jQuery(function ($) {
+
+                                $('.section-portfolio-slides3').imagesLoaded(function () {
+                                    $('.section-portfolio-slides3').carouFredSel({
+                                        auto: false,
+                                        prev: '.section-portfolio-slider3 .prev',
+                                        next: '.section-portfolio-slider3 .next',
+                                        responsiveClass: true,
+                                        Responsive: {
+                                            swipe: {
+                                                onTouch: true
+                                            },
+                                            scroll: {
+                                                items: 1
+                                            }
+                                        },
+                                    });
+                                });
+
+                            });
+
+                        </script>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div style="height:50px"></div>
+    <div id="primary" class="sidebar-right">
+        <div class="container group">
+            <div class="row">
+
+                <div class="extra-content margin-top group span12">
+                    <div class="border-line"></div>
+                    <div class="section portfolio">
+                        <section>
+                            <div class="sect-div" style="font-weight:bold; color:black; text-align:left; margin-left:5px;">Ank 2021</div>
+                            <div class="portfolio-projects section-portfolio-slider margin-bottom">
+                                <a class="prev span1" href="#">
+                                    <img src="../Design/Images/section-video-left.png" />
+                                </a>
+                                <div class="section-portfolio-carousel span10">
+                                    <ul class="section-portfolio-slides">
+                                        @foreach (var obj in Model.Year_2021)
+                                        {
+                                            <li class="work span2">
+
+                                                <div class="img">
+                                                    <img id="myImg" width="162" height="90" src="@obj.Image" onclick="Call_Model('@obj.PdfUrl');" />
+                                                </div>
+
+                                                <div style="text-align: center; font-weight:bold; color:black; " onclick="Call_Model('@obj.PdfUrl');">@obj.Month</div>
+
+                                            </li>
+                                        }
+
+
+
+                                    </ul>
+                                </div>
+                                <a class="next span1" href="#"><img src="../Design/Images/section-video-right.png" /></a>
+                                <div class="clear"></div>
+                            </div>
+                        </section>
+                        <script type="text/javascript">
+
+                            jQuery(function ($) {
+
+                                $('.section-portfolio-slides').imagesLoaded(function () {
+                                    $('.section-portfolio-slides').carouFredSel({
+                                        auto: false,
+                                        prev: '.section-portfolio-slider .prev',
+                                        next: '.section-portfolio-slider .next',
+                                        responsiveClass: true,
+                                        Responsive: {
+                                            swipe: {
+                                                onTouch: true
+                                            },
+                                            scroll: {
+                                                items: 1
+                                            }
+                                        },
+                                    });
+                                });
+
+                            });
+
+                        </script>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="primary" class="sidebar-right">
+        <div class="container group">
+            <div class="row">
+
+                <div class="extra-content margin-top group span12">
+                    <div class="border-line"></div>
+                    <div class="section portfolio">
+
+
+
+                        <section>
+                            <div class="sect-div" style="font-weight:bold; color:black; text-align:left; margin-left:5px;">Ank 2020</div>
+                            <div class="portfolio-projects section-portfolio-slider1 margin-bottom">
+                                <a class="prev span1" href="#">
+                                    <img src="../Design/Images/section-video-left.png" />
+                                </a>
+                                <div class="section-portfolio-carousel span10">
+                                    <ul class="section-portfolio-slides1">
+                                        @foreach (var obj in Model.Year_2020)
+                                        {
+                                            <li class="work span2">
+
+                                                <div class="img">
+                                                    <img id="myImg" width="162" height="136" @*class="attachment-section_video"*@ src="@obj.Image" onclick="Call_Model('@obj.PdfUrl', this);" />
+                                                </div>
+
+                                                <div style="text-align: center; font-weight:bold; color:black;">@obj.Month</div>
+
+                                            </li>
+                                        }
+
+
+
+                                    </ul>
+                                </div>
+                                <a class="next span1" href="#"><img src="../Design/Images/section-video-right.png" /></a>
+                                <div class="clear"></div>
+                            </div>
+                        </section>
+
+                        <script type="text/javascript">
+
+                            jQuery(function ($) {
+
+                                $('.section-portfolio-slides1').imagesLoaded(function () {
+                                    $('.section-portfolio-slides1').carouFredSel({
+                                        auto: false,
+                                        prev: '.section-portfolio-slider1 .prev',
+                                        next: '.section-portfolio-slider1 .next',
+                                        responsiveClass: true,
+                                        Responsive: {
+                                            swipe: {
+                                                onTouch: true
+                                            },
+                                            scroll: {
+                                                items: 1
+                                            }
+                                        },
+                                    });
+                                });
+
+                            });
+
+                        </script>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="primary" class="sidebar-right">
+        <div class="container group">
+            <div class="row">
+
+                <div class="extra-content margin-top group span12">
+                    <div class="border-line"></div>
+                    <div class="section portfolio">
+
+
+
+                        <section>
+                            <div class="sect-div" style="font-weight:bold; color:black; text-align:left; margin-left:5px;">Ank 2019</div>
+                            <div class="portfolio-projects section-portfolio-slider2 margin-bottom">
+                                <a class="prev span1" href="#">
+                                    <img src="../Design/Images/section-video-left.png" />
+                                </a>
+                                <div class="section-portfolio-carousel span10">
+                                    <ul class="section-portfolio-slides2">
+                                        @foreach (var obj in Model.Year_2019)
+                                        {
+                                            <li class="work span2">
+
+                                                <div class="img">
+                                                    <img id="myImg" width="162" height="136" src="@obj.Image" onclick="Call_Model('@obj.PdfUrl', this);" />
+                                                </div>
+
+                                                <div style="text-align: center; font-weight:bold; color:black;">@obj.Month</div>
+
+                                            </li>
+                                        }
+
+
+
+                                    </ul>
+                                </div>
+                                <a class="next span1" href="#"><img src="../Design/Images/section-video-right.png" /></a>
+                                <div class="clear"></div>
+                            </div>
+                        </section>
+
+                        <script type="text/javascript">
+
+                            jQuery(function ($) {
+
+                                $('.section-portfolio-slides2').imagesLoaded(function () {
+                                    $('.section-portfolio-slides2').carouFredSel({
+                                        auto: false,
+                                        prev: '.section-portfolio-slider2 .prev',
+                                        next: '.section-portfolio-slider2 .next',
+                                        responsiveClass: true,
+                                        Responsive: {
+                                            swipe: {
+                                                onTouch: true
+                                            },
+                                            scroll: {
+                                                items: 1
+                                            }
+                                        },
+
+
+                                    });
+                                });
+
+                            });
+
+                        </script>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="modal " id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModelCenterTitle" aria-hidden="true" style="z-index:9999">
+        <div class=" modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="max-width: 528px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id=" exampleModalCenterTitle">अंक </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class=" modal-body" id="bodydiv" style="height:500px; max-height:600px;">
+                    @*<div class=" modal-body" id="bodydiv" style="height:1000px; max-height:600px;">*@
+                    @*<iframe width="500"  height="700"  id="iframepdf"></iframe>*@
+                    <iframe width="100%" height="100%" id="iframepdf"></iframe>
+
+                </div>
+                <div class="modal-footer" style="text-align:center;">
+                    <button type="button" id="btnSave" class="btn btn-secondary closeByBtn " data-dismiss="modal"> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+        
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+
+        var span = document.getElementsByClassName("close")[0];
+        var span1 = document.getElementsByClassName("closeByBtn")[0];
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        span1.onclick = function () {
+            modal.style.display = "none";
+        }
+        function Call_Model(URL) {
+
+            jQuery.noConflict();
+            jQuery("#myModal").show();
+            jQuery('#iframepdf').attr('src', URL);
+            return false;
+
+        }
+
+
+        function onClick(element) {
+
+            document.getElementById("myModal").style.display = "block";
+        }
+    </script>
+
+
+    <style>
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            height: 120px;
+        }
+
+            #myImg:hover {
+                opacity: 0.7;
+            }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            margin: -100px 0 0 -20px;
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+           
+        }
+
+        .modal-body {
+            /*padding: 0px;*/
+            padding: 5px;
+            position: relative;
+        }
+
+        .modal-header {
+            margin-left: 7px;
+            background-color: white;
+        }
+
+        .modal-footer {
+            margin-left: 6px;
+        }
+
+        .modal-header .close {
+            padding: 1rem;
+            margin: -1rem -1rem -1rem auto;
+        }
+
+        .modal-header .close {
+            margin-top: -62px;
+            /* margin-top: 80px;*/
+            /* margin-right: 500px;*/
+            margin-left:220px;
+            color: black;
+        }
+
+        .close {
+            float: right;
+            font-size: 21px;
+            font-weight: bold;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            filter: alpha(opacity=20);
+            opacity: 0.2;
+        }
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content, #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+
+
+        /* The Close Button */
+        .close {
+            /*position: absolute;*/
+            top: 35px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        /* 100% Image Width on Smaller Screens */
+
+        .modal-content {
+            width: 100%;
+        }
+        @@media(max-width:373px) {
+            .responsive .modal-content {
+                width: 100%;
+            }
+        }
+
+        @@media(max-width:767px) {
+            .responsive .modal-content .modal-body {
+                height: 400px;
+            }
+        }
+    </style>
+
+
+
+</div>
+@*<div id="cboxOverlay" style="opacity: 0.7; cursor: pointer;   "></div>;
+        <div id="colorbox"  role="dialog" tabindex="-1" style="visibility:visible; display:none;
+    position:fixed; top:67px; left:96px;  width:287px;
+    height:536px; opacity:1; cursor:auto; overflow:hidden;">
+            <div id="cboxWrapper" style="height:536px; width:287px;">
+                <div>
+                    <div id="cboxTopLeft" style="float:left;"></div>
+                    <div id="cboxTopCenter" style="float:left; width:245px;"></div>
+                    <div id="cboxTopRight" style="float:left;"></div>
+                </div>
+                <div style="clear:left;">
+                    <div id="cboxMiddleLeft" style="float:left; height:494px; ">
+                        <div id="cboxContent" style="float:left; width:245px; height:494px;">
+                            <div id="cboxLoadedContent" style="width:245px; overflow:auto; height:466px;">
+                                <iframe id="iframepdfdemo"></iframe>
+                            </div>
+                            <button id="cboxClose">close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+

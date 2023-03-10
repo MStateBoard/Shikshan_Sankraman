@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin_tbl1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="nvarchar" MaxLength="50" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+    <Property Name="FileName" Type="varchar" MaxLength="50" />
+    <Property Name="DateTime" Type="smalldatetime" />
+    <Property Name="PdfUrl" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Contact_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="EmailId" Type="varchar" MaxLength="100" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Mahavidyalaya_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vargadar" Type="nvarchar(max)" />
+    <Property Name="SansthecheNav" Type="nvarchar(max)" />
+    <Property Name="MahavidyalayacheNav" Type="nvarchar(max)" />
+    <Property Name="SansthechaPatta" Type="nvarchar(max)" />
+    <Property Name="CityName" Type="nvarchar(max)" />
+    <Property Name="IndexNo" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="Jhila" Type="nvarchar(max)" />
+    <Property Name="PincodeNo" Type="nvarchar(max)" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+    <Property Name="Vargani" Type="nvarchar(max)" />
+    <Property Name="MonthStart" Type="nvarchar(max)" />
+    <Property Name="MonthEnd" Type="nvarchar(max)" />
+    <Property Name="Ip_Address" Type="nvarchar(max)" />
+    <Property Name="Date_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NewChitrakar_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="AadharNo" Type="varchar" MaxLength="50" />
+    <Property Name="ChitrachaVishay" Type="nvarchar(max)" />
+    <Property Name="ShaikshanikPatrata" Type="nvarchar(max)" />
+    <Property Name="KaryalayachaPrakar" Type="nvarchar(max)" />
+    <Property Name="VyavasayikSthan" Type="nvarchar(max)" />
+    <Property Name="ChitraPrakashanStatus" Type="nvarchar(max)" />
+    <Property Name="Anubhav" Type="nvarchar(max)" />
+    <Property Name="KaryaratSthal" Type="nvarchar(max)" />
+    <Property Name="PrakashitChitra" Type="nvarchar(max)" />
+    <Property Name="PrakashitKashyamadhe" Type="nvarchar(max)" />
+    <Property Name="Vishay" Type="nvarchar(max)" />
+    <Property Name="AavadichaVishay" Type="nvarchar(max)" />
+    <Property Name="Payment" Type="nvarchar(max)" />
+    <Property Name="SamtiPatra" Type="nvarchar(max)" />
+    <Property Name="Chitra" Type="nvarchar(max)" />
+    <Property Name="Chitra2" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NewKaryalay_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vargadar" Type="nvarchar(max)" />
+    <Property Name="SurnameOfHead" Type="nvarchar(max)" />
+    <Property Name="Nav" Type="nvarchar(max)" />
+    <Property Name="VadilancheNav" Type="nvarchar(max)" />
+    <Property Name="KaryalayacheNav" Type="nvarchar(max)" />
+    <Property Name="GharNav" Type="nvarchar(max)" />
+    <Property Name="RoadName" Type="nvarchar(max)" />
+    <Property Name="NearMark" Type="nvarchar(max)" />
+    <Property Name="CityName" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="Jhila" Type="nvarchar(max)" />
+    <Property Name="PincodeNo" Type="nvarchar(max)" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="VarganiDate" Type="date" />
+    <Property Name="Vargani" Type="nvarchar(max)" />
+    <Property Name="MonthStart" Type="nvarchar(max)" />
+    <Property Name="MonthEnd" Type="nvarchar(max)" />
+    <Property Name="Ip_Address" Type="nvarchar(max)" />
+    <Property Name="Date_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NewVarganidar_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="FatherName" Type="nvarchar(max)" />
+    <Property Name="GharNav" Type="nvarchar(max)" />
+    <Property Name="RoadName" Type="nvarchar(max)" />
+    <Property Name="NearMark" Type="nvarchar(max)" />
+    <Property Name="CityName" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="Jhila" Type="nvarchar(max)" />
+    <Property Name="PincodeNo" Type="nvarchar(max)" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+    <Property Name="AadharCardNo" Type="varchar" MaxLength="50" />
+    <Property Name="MonthStart" Type="nvarchar(max)" />
+    <Property Name="MonthEnd" Type="nvarchar(max)" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="Varagani" Type="nvarchar(max)" />
+    <Property Name="Ip_Address" Type="nvarchar(max)" />
+    <Property Name="Date_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NewWriter_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="AadharNo" Type="varchar" MaxLength="50" />
+    <Property Name="LekhachaVishay" Type="nvarchar(max)" />
+    <Property Name="ShaikshanikPatrata" Type="nvarchar(max)" />
+    <Property Name="KaryalayachaPrakar" Type="nvarchar(max)" />
+    <Property Name="VyavasaikSthan" Type="nvarchar(max)" />
+    <Property Name="LekhPrakashanStatus" Type="nvarchar(max)" />
+    <Property Name="Anubhav" Type="nvarchar(max)" />
+    <Property Name="KaryaratSthal" Type="nvarchar(max)" />
+    <Property Name="PrakashitLekh" Type="nvarchar(max)" />
+    <Property Name="PrakashitKashyamadhe" Type="nvarchar(max)" />
+    <Property Name="Vishay" Type="nvarchar(max)" />
+    <Property Name="AavadichaVishay" Type="nvarchar(max)" />
+    <Property Name="Payment" Type="nvarchar(max)" />
+    <Property Name="SamtiPatra" Type="nvarchar(max)" />
+    <Property Name="Lekh" Type="nvarchar(max)" />
+    <Property Name="Font" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Pratikriya_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="Education" Type="nvarchar(max)" />
+    <Property Name="Varsh" Type="nvarchar(max)" />
+    <Property Name="Mahine" Type="nvarchar(max)" />
+    <Property Name="Pratikriya" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Registration_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="School_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vargadar" Type="nvarchar(max)" />
+    <Property Name="SansthecheNav" Type="nvarchar(max)" />
+    <Property Name="SchoolName" Type="nvarchar(max)" />
+    <Property Name="SansthechaPatta" Type="nvarchar(max)" />
+    <Property Name="SchoolAdd" Type="nvarchar(max)" />
+    <Property Name="CityName" Type="nvarchar(max)" />
+    <Property Name="IndexNo" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="Jhila" Type="nvarchar(max)" />
+    <Property Name="PincodeNo" Type="nvarchar(max)" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="Vargani" Type="varchar" MaxLength="50" />
+    <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+    <Property Name="MonthStart" Type="nvarchar(max)" />
+    <Property Name="MonthEnd" Type="nvarchar(max)" />
+    <Property Name="Ip_Address" Type="nvarchar(max)" />
+    <Property Name="Date_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_Mandal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ino" Type="varchar" MaxLength="50" />
+    <Property Name="year" Type="nvarchar" MaxLength="50" />
+    <Property Name="month" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_payment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="nvarchar(max)" />
+    <Property Name="tracking_id" Type="nvarchar(max)" />
+    <Property Name="bank_ref_no" Type="nvarchar(max)" />
+    <Property Name="order_status" Type="nvarchar(max)" />
+    <Property Name="failure_message" Type="nvarchar(max)" />
+    <Property Name="payment_mode" Type="nvarchar(max)" />
+    <Property Name="card_name" Type="nvarchar(max)" />
+    <Property Name="status_code" Type="nvarchar(max)" />
+    <Property Name="status_message" Type="nvarchar(max)" />
+    <Property Name="currency" Type="nvarchar(max)" />
+    <Property Name="amount_money" Type="nvarchar(max)" />
+    <Property Name="billing_name" Type="nvarchar(max)" />
+    <Property Name="billing_address" Type="nvarchar(max)" />
+    <Property Name="billing_city" Type="nvarchar(max)" />
+    <Property Name="billing_state" Type="nvarchar(max)" />
+    <Property Name="billing_zip" Type="nvarchar(max)" />
+    <Property Name="billing_country" Type="nvarchar(max)" />
+    <Property Name="billing_tel" Type="nvarchar(max)" />
+    <Property Name="billing_email" Type="nvarchar(max)" />
+    <Property Name="delivery_name" Type="nvarchar(max)" />
+    <Property Name="delivery_address" Type="nvarchar(max)" />
+    <Property Name="delivery_city" Type="nvarchar(max)" />
+    <Property Name="delivery_state" Type="nvarchar(max)" />
+    <Property Name="delivery_zip" Type="nvarchar(max)" />
+    <Property Name="delivery_country" Type="nvarchar(max)" />
+    <Property Name="delivery_tel" Type="nvarchar(max)" />
+    <Property Name="merchant_param1" Type="nvarchar(max)" />
+    <Property Name="merchant_param2" Type="nvarchar(max)" />
+    <Property Name="merchant_param3" Type="nvarchar(max)" />
+    <Property Name="merchant_param4" Type="nvarchar(max)" />
+    <Property Name="merchant_param5" Type="nvarchar(max)" />
+    <Property Name="vault" Type="nvarchar(max)" />
+    <Property Name="offer_type" Type="nvarchar(max)" />
+    <Property Name="offer_code" Type="nvarchar(max)" />
+    <Property Name="discount_value" Type="nvarchar(max)" />
+    <Property Name="mer_account" Type="nvarchar(max)" />
+    <Property Name="eci_value" Type="nvarchar(max)" />
+    <Property Name="retry" Type="nvarchar(max)" />
+    <Property Name="response_code" Type="nvarchar(max)" />
+    <Property Name="billing_notes" Type="nvarchar(max)" />
+    <Property Name="trans_date" Type="nvarchar(max)" />
+    <Property Name="bin_country" Type="nvarchar(max)" />
+    <Property Name="active" Type="int" />
+  </EntityType>
+  <EntityContainer Name="NewDatabaseModelStoreContainer">
+    <EntitySet Name="Admin_tbl1" EntityType="Self.Admin_tbl1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact_tbl" EntityType="Self.Contact_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mahavidyalaya_tbl" EntityType="Self.Mahavidyalaya_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewChitrakar_tbl" EntityType="Self.NewChitrakar_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewKaryalay_tbl" EntityType="Self.NewKaryalay_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewVarganidar_tbl" EntityType="Self.NewVarganidar_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewWriter_tbl" EntityType="Self.NewWriter_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pratikriya_tbl" EntityType="Self.Pratikriya_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration_tbl" EntityType="Self.Registration_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="School_tbl" EntityType="Self.School_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Mandal" EntityType="Self.Tbl_Mandal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_payment" EntityType="Self.Tbl_payment" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

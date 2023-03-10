@@ -1,0 +1,21 @@
+﻿.col-lg-7{
+    margin-left:170px;
+    margin-top:50px;
+}
+button {
+    color: white;
+    background-color: #193654;
+    padding:3px 10px; 
+}
+    button:hover {
+        background-color: white;
+        color: black;
+        font-weight:bold;
+    }
+    #sidebar-contact{
+        float:right;
+        
+    }
+.sidebar-nav ul li {
+    text-align: left;
+}

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MahavidyalayaDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Mahavidyalaya_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vargadar" Type="varchar" MaxLength="50" />
+    <Property Name="SansthecheNav" Type="varchar" MaxLength="50" />
+    <Property Name="MahavidyalayacheNav" Type="varchar" MaxLength="50" />
+    <Property Name="SansthechaPatta" Type="varchar" MaxLength="50" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" />
+    <Property Name="IndexNo" Type="varchar" MaxLength="50" />
+    <Property Name="Taluka" Type="varchar" MaxLength="50" />
+    <Property Name="Jhila" Type="varchar" MaxLength="50" />
+    <Property Name="PincodeNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+    <Property Name="Vargani" Type="varchar" MaxLength="50" />
+    <Property Name="MonthStart" Type="varchar" MaxLength="50" />
+    <Property Name="MonthEnd" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="MahavidyalayaDbModelStoreContainer">
+    <EntitySet Name="Mahavidyalaya_tbl" EntityType="Self.Mahavidyalaya_tbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

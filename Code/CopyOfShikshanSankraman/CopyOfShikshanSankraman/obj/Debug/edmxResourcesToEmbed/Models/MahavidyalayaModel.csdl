@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MahavidyalayaDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Mahavidyalaya_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vargadar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SansthecheNav" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MahavidyalayacheNav" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SansthechaPatta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IndexNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Taluka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jhila" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PincodeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VarganiDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Vargani" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MonthStart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MonthEnd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="MahavidyalayaDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Mahavidyalaya_tbl" EntityType="Self.Mahavidyalaya_tbl" />
+  </EntityContainer>
+</Schema>

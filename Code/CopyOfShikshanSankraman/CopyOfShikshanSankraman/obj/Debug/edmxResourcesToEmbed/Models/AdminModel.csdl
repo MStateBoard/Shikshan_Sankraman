@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdminDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AdminDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin_tbl" EntityType="AdminDatabaseModel.Admin_tbl" />
+  </EntityContainer>
+  <EntityType Name="Admin_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Month" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="PdfUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

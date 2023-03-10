@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoSampleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DemoSample.dbo.Candidates' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Candidates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Payment" Type="nvarchar" MaxLength="200" />
+    <Property Name="Myfile" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityContainer Name="DemoSampleModelStoreContainer">
+    <EntitySet Name="Candidates" EntityType="Self.Candidates" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Candidates].[Id] AS [Id], 
+    [Candidates].[Payment] AS [Payment], 
+    [Candidates].[Myfile] AS [Myfile]
+    FROM [dbo].[Candidates] AS [Candidates]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

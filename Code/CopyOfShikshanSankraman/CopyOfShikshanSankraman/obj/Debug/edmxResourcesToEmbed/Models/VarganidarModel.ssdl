@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VarganidarDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Vargani_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="FatherName" Type="varchar" MaxLength="50" />
+    <Property Name="GharNav" Type="varchar" MaxLength="50" />
+    <Property Name="RoadName" Type="varchar" MaxLength="50" />
+    <Property Name="NearMark" Type="varchar" MaxLength="50" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" />
+    <Property Name="Taluka" Type="varchar" MaxLength="50" />
+    <Property Name="Jhila" Type="varchar" MaxLength="50" />
+    <Property Name="PincodeNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+    <Property Name="AadharCardNo" Type="varchar" MaxLength="50" />
+    <Property Name="MonthStart" Type="varchar" MaxLength="50" />
+    <Property Name="MonthEnd" Type="varchar" MaxLength="50" />
+    <Property Name="ct100$contentPlaceHolder2$FileUpload1" Type="varchar" MaxLength="550" />
+  </EntityType>
+  <EntityContainer Name="VarganidarDbModelStoreContainer">
+    <EntitySet Name="Vargani_tbl" EntityType="Self.Vargani_tbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,83 @@
+﻿@model CopyOfShikshanSankraman.Models.Registration_tbl
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/LoginLayout.cshtml";
+}
+
+@*<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #152f49;
+    }
+
+    li {
+        float: left;
+    }
+
+        li a {
+            display: block;
+            padding: 8px;
+        }
+</style>*@
+
+
+
+
+
+<center>
+    <form method="post">
+        @*<ul style="margin-top:5px">
+            <li><a href="../Login/Login">Login</a></li>
+          
+            <li><a href="../Login/Registration">Registration</a></li>
+           
+
+        </ul>*@
+        @if (TempData["Msg"] != null)
+        {
+            <center><h4 style="color:black">@TempData["Msg"].ToString()</h4></center>
+        }
+        <br />
+        <center> <h3>Admin Login</h3></center>
+        <br />
+        <div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-2">
+                    <label>User Name </label>
+                </div>
+                <div class="col-md-2">
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                </div>
+            </div>
+            <br />
+            <div class="col-md-4"></div>
+            <div class="col-md-2">
+                <label>Password </label>
+            </div>
+            <div class="col-md-2">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+            
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <br />
+
+                <div class="col-md-4">
+                    <input type="submit" class="btn btn-primary" value="submit"  style="background-color:black" />
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</center>
+
+
+

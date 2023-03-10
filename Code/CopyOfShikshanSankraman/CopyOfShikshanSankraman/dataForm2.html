@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script>
+        window.onload = function () {
+            var d = new Date().getTime();
+            document.getElementById("tid").value = d;
+        };
+    </script>
+</head>
+<!--style="display:none"-->
+<body>
+    <form method="post" name="customerData" action="../ccavRequestHandler.aspx">
+
+        <table width="40%" height="100" border='1' align="center"><caption><font size="4" color="blue"><b>Integration Kit</b></font></caption></table>
+        <table width="40%" height="100" border='1' align="center">
+            <tr>
+                <td>Parameter Name:</td>
+                <td>Parameter Value:</td>
+            </tr>
+            <tr>
+                <td colspan="2"> Compulsory information</td>
+            </tr>
+            <tr>
+                <td>TID	:</td>
+                <td><input type="text" name="tid" id="tid" readonly /></td>
+            </tr>
+            <tr>
+                <td>Merchant Id</td>
+                <td><input type="text" name="merchant_id" id="merchant_id" value="229022" /></td>
+            </tr>
+            <tr>
+                <td>Order Id</td>
+                <td><input type="text" name="order_id" value="123654789" /></td>
+            </tr>
+            <tr>
+                <td>Amount</td>
+                <td><input type="text" id="amount" name="amount"  /></td>
+            </tr>
+            <tr>
+                <td>Currency</td>
+                <td><input type="text" name="currency" value="INR" /></td>
+            </tr>
+            <tr>
+                <td>Redirect URL</td>
+                <td><input type="text" name="redirect_url" value="https://localhost:44356/ccavResponseHandler.aspx" /></td>
+            </tr>
+            <tr>
+                <td>Cancel URL</td>
+                <td><input type="text" name="cancel_url" value="https://localhost:44356/ccavResponseHandler.aspx" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">Billing information(optional):</td>
+            </tr>
+            <tr>
+                <td>Billing Name</td>
+                <td><input type="text" name="billing_name" value="Charli" /></td>
+            </tr>
+            <tr>
+                <td>Billing Address:</td>
+                <td><input type="text" name="billing_address" value="Room no 1101, near Railway station Ambad" /></td>
+            </tr>
+            <tr>
+                <td>Billing City:</td>
+                <td><input type="text" name="billing_city" value="Indore" /></td>
+            </tr>
+            <tr>
+                <td>Billing State:</td>
+                <td><input type="text" name="billing_state" value="MP" /></td>
+            </tr>
+            <tr>
+                <td>Billing Zip:</td>
+                <td><input type="text" name="billing_zip" value="425001" /></td>
+            </tr>
+            <tr>
+                <td>Billing Country:</td>
+                <td><input type="text" name="billing_country" value="India" /></td>
+            </tr>
+            <tr>
+                <td>Billing Tel:</td>
+                <td><input type="text" name="billing_tel" value="9899622605" /></td>
+            </tr>
+            <tr>
+                <td>Billing Email:</td>
+                <td><input type="text" name="billing_email" value="test@gmail.com" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">Shipping information(optional):</td>
+            </tr>
+            <tr>
+                <td>Shipping Name</td>
+                <td><input type="text" name="delivery_name" value="Chaplin" /></td>
+            </tr>
+            <tr>
+                <td>Shipping Address:</td>
+                <td><input type="text" name="delivery_address" value="room no.701 near bus stand" /></td>
+            </tr>
+            <tr>
+                <td>shipping City:</td>
+                <td><input type="text" name="delivery_city" value="Hyderabad" /></td>
+            </tr>
+            <tr>
+                <td>shipping State:</td>
+                <td><input type="text" name="delivery_state" value="Andhra" /></td>
+            </tr>
+            <tr>
+                <td>shipping Zip:</td>
+                <td><input type="text" name="delivery_zip" value="425001" /></td>
+            </tr>
+            <tr>
+                <td>shipping Country:</td>
+                <td><input type="text" name="delivery_country" value="India" /></td>
+            </tr>
+            <tr>
+                <td>Shipping Tel:</td>
+                <td><input type="text" name="delivery_tel" value="9896426054" /></td>
+            </tr>
+            <tr>
+                <td>Merchant Param1</td>
+                <td><input type="text" id="todaydate" name="merchant_param1" value="additional Info." /></td>
+            </tr>
+            <tr>
+                <td>Merchant Param2</td>
+                <td><input type="text" id="nextYearDate" name="merchant_param2" value="additional Info." /></td>
+            </tr>
+            <tr>
+                <td>Merchant Param3</td>
+                <td><input type="text" name="merchant_param3" value="additional Info." /></td>
+            </tr>
+            <tr>
+                <td>Merchant Param4</td>
+                <td><input type="text" name="merchant_param4" value="additional Info." /></td>
+            </tr>
+            <tr>
+                <td>Merchant Param5</td>
+                <td><input type="text" name="merchant_param5" value="additional Info." /></td>
+            </tr>
+            <tr>
+                <td>Promo Code</td>
+                <td><input type="text" name="promo_code" /></td>
+            </tr>
+            <tr>
+                <td>Customer Id:</td>
+                <td><input type="text" name="customer_identifier" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Checkout" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
+<script type="text/javascript">
+    //var r = window.location.search();
+    //new URL(location.href).searchParams.get('Vargani')
+    //const params = new URL(location.href).searchParams;
+    //const vargani = params.get('Vargani');
+
+    //const queryString = window.location.search;
+    //const parameters = new URLSearchParams(queryString);
+    //const valueOfVargani = parameters.get('Vargani');
+    //document.getElementById('amount').innerHTML = valueOfVargani;
+
+    $(document).ready(function () {
+        debugger;
+        window.addEventListener('load', () => {
+            const queryString = window.location.search;
+            const parameters = new URLSearchParams(queryString);
+            const valueOfVargani = parameters.get('Vargani');
+            document.getElementById('amount').innerHTML = valueOfVargani;
+        })
+        
+        $("input[name*='merchant_id']").val('229022');
+        // $("input[name*='tid']").val(GetParameterValues("adhar"));
+        $("input[name*='order_id']").val(GetParameterValues('id'));
+        $("input[name*='amount']").val(GetParameterValues('valueOfVargani'));
+        $("input[name*='billing_name']").val(GetParameterValues('sirname'));
+        $("input[name*='billing_address']").val(GetParameterValues('address'));
+        $("input[name*='billing_city']").val(GetParameterValues('city'));
+        $("input[name*='billing_zip']").val(GetParameterValues('pincode'));
+        $("input[name*='billing_email']").val(GetParameterValues('email'));
+        $("input[name*='billing_tel']").val(GetParameterValues('mobile1'));
+        $("input[name*='delivery_name']").val(GetParameterValues('sirname'));
+        $("input[name*='delivery_address']").val(GetParameterValues('address'));
+        $("input[name*='delivery_city']").val(GetParameterValues('city'));
+        $("input[name*='delivery_zip']").val(GetParameterValues('pincode'));
+        $("input[name*='delivery_email']").val(GetParameterValues('email'));
+        $("input[name*='delivery_tel']").val(GetParameterValues('mobile1'));
+        var today = new Date();
+
+        var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+        $('#todaydate').val(date);
+
+        var NextyearDate= new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+        $('#nextYearDate').val(NextyearDate);
+
+
+        // $("input[name*='Submitbtn']").click();
+        function GetParameterValues(param) {
+            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < url.length; i++) {
+                var urlparam = url[i].split('=');
+                if (urlparam[0] == param) {
+                    return urlparam[1];
+                }
+            }
+
+        }
+
+    });
+</script>

@@ -1,0 +1,119 @@
+﻿@model CopyOfShikshanSankraman.Models.Pratikriya_tbl
+@{
+    ViewBag.Title = "Pratikriya";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+@*<link href="~/Design/Pratikriya/pratikriya.css" rel="stylesheet" />*@
+
+
+
+<style>
+    .navbar-nav{
+        float:none;
+    }
+    input[type="text"] {
+        height: 30px;
+        width: 210px;
+    }
+</style>
+@if (TempData["Msg"] != null)
+{
+    <h4 style="color:red">@TempData["Msg"].ToString()</h4>
+}
+
+<div id="UpdatePanel1">
+    <h3 style="text-align:center; margin-top:50px;">प्रतिक्रिया देण्यासाठी</h3>
+    <br />
+    @using (Html.BeginForm("Pratikriya", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="container">
+            <div class="row" style="padding-left:100px;">
+
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FullName, "संपूर्ण नाव :", htmlAttributes: new { @class = "control-label" })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MobileNo, "मोबाईल नं. :", htmlAttributes: new { @class = "control-label " })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.MobileNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MobileNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Education, "शैक्षणिक पात्रता:", htmlAttributes: new { @class = "control-label " })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.Education, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Education, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Varsh, " वर्ष:", htmlAttributes: new { @class = "control-label " })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.Varsh, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Varsh, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Mahine, "महिने:", htmlAttributes: new { @class = "control-label " })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.Mahine, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Mahine, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Pratikriya, "आपली प्रतिक्रिया:", htmlAttributes: new { @class = "control-label " })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.TextAreaFor(model => model.Pratikriya, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Pratikriya, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-horizontal ">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <br /> <br /> <br />
+            <div class="form-group" align="center">
+
+                <div class="form-group">
+                    <div class="col-md-offset-5 col-md-2">
+                        <input type="submit" value="submit" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    }
+
+
+    </div>
+
+

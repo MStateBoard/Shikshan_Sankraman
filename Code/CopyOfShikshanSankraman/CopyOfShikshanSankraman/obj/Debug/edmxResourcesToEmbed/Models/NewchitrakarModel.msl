@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NewChitrakarDbModelStoreContainer" CdmEntityContainer="NewChitrakarDbEntities">
+    <EntitySetMapping Name="NewChitrakar_tbl">
+      <EntityTypeMapping TypeName="NewChitrakarDbModel.NewChitrakar_tbl">
+        <MappingFragment StoreEntitySet="NewChitrakar_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+          <ScalarProperty Name="ChitrachaVishay" ColumnName="ChitrachaVishay" />
+          <ScalarProperty Name="ShaikshanikPatrata" ColumnName="ShaikshanikPatrata" />
+          <ScalarProperty Name="KaryalayachaPrakar" ColumnName="KaryalayachaPrakar" />
+          <ScalarProperty Name="VyavasayikSthan" ColumnName="VyavasayikSthan" />
+          <ScalarProperty Name="ChitraPrakashanStatus" ColumnName="ChitraPrakashanStatus" />
+          <ScalarProperty Name="Anubhav" ColumnName="Anubhav" />
+          <ScalarProperty Name="KaryaratSthal" ColumnName="KaryaratSthal" />
+          <ScalarProperty Name="PrakashitChitra" ColumnName="PrakashitChitra" />
+          <ScalarProperty Name="PrakashitKashyamadhe" ColumnName="PrakashitKashyamadhe" />
+          <ScalarProperty Name="Vishay" ColumnName="Vishay" />
+          <ScalarProperty Name="AavadichaVishay" ColumnName="AavadichaVishay" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="SamtiPatra" ColumnName="SamtiPatra" />
+          <ScalarProperty Name="Chitra" ColumnName="Chitra" />
+          <ScalarProperty Name="Chitra2" ColumnName="Chitra2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

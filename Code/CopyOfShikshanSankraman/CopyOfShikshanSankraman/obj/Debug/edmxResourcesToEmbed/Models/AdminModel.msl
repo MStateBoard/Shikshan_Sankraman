@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdminDatabaseModelStoreContainer" CdmEntityContainer="AdminDatabaseEntities">
+    <EntitySetMapping Name="Admin_tbl">
+      <EntityTypeMapping TypeName="AdminDatabaseModel.Admin_tbl">
+        <MappingFragment StoreEntitySet="Admin_tbl">
+          <ScalarProperty Name="PdfUrl" ColumnName="PdfUrl" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

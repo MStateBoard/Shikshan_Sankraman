@@ -1,0 +1,48 @@
+﻿@model List<CopyOfShikshanSankraman.Models.Admin_tbl1>
+@{
+    ViewBag.Title = "AdminList";
+}
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+       
+    }
+
+    th, td {
+        padding: 15px;
+    }
+</style>
+<h2>AdminList</h2>
+
+<table style="border:5px; ">
+    <tr>
+        <th>Year</th>
+        <th>Month</th>
+        <th>IPAddress</th>
+        <th>FileName</th>
+        <th>DateTime</th>
+        <th>PdfUrl</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Year</td>
+            <td>@item.Month</td>
+            <td>@item.IPAddress</td>
+            <td>@item.FileName</td>
+            <td>@item.DateTime</td>
+            <td>@item.PdfUrl</td>
+            <td>
+                <a href="@Url.Action("Homepage", new { item.Id, item.Year, item.Month, item.IPAddress, item.FileName, item.DateTime, item.PdfUrl })" class="btn btn-success">Edit</a>
+                <a href="@Url.Action("Delete", new {item.Id})" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

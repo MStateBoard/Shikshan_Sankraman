@@ -1,0 +1,103 @@
+﻿@model List<CopyOfShikshanSankraman.Models.NewVarganidar_tbl>
+@{
+    ViewBag.Title = "VaraganidarList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+
+
+
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .fixTableHead thead th {
+        position: sticky;
+        top: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    
+</style>
+
+
+<h2> वैयक्तिक वर्गणीदार</h2>
+<div class="fixTableHead" style="overflow-x:scroll">
+    <table style="border: 5px;  ">
+        <thead>
+            <tr>
+                <th>Surname</th>
+                <th>Name</th>
+                <th>FatherName</th>
+                <th>GharNav</th>
+                <th>RoadName</th>
+                <th>NearMar</th>
+                <th>CityName</th>
+                <th>Taluka</th>
+                <th>Jhila</th>
+                <th>PincodeNo</th>
+                <th>Email</th>
+                <th>MobileNo1</th>
+                <th>MobileNo2</th>
+                <th>VarganiDate</th>
+                <th>AadharCardNo</th>
+                <th>MonthStart</th>
+                <th>MonthEnd</th>
+                <th>Vargani</th>
+                <th>Photo</th>
+
+            </tr>
+        </thead>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Surname</td>
+                <td>@item.Name</td>
+                <td>@item.FatherName</td>
+                <td>@item.GharNav</td>
+                <td>@item.RoadName</td>
+                <td>@item.NearMark</td>
+                <td>@item.CityName</td>
+                <td>@item.Taluka</td>
+                <td>@item.Jhila</td>
+                <td>@item.PincodeNo</td>
+                <td>@item.Email</td>
+                <td>@item.MobileNo1</td>
+                <td>@item.MobileNo2</td>
+                <td>@item.VarganiDate</td>
+                <td>@item.AadharCardNo</td>
+                <td>@item.MonthStart</td>
+                <td>@item.MonthEnd</td>
+                <td>@item.Varagani</td>      
+                <td>@Html.ActionLink("Downlaod", "DownloadPhoto", new { id = item.Id })     </td>
+
+
+
+
+            </tr>
+        }
+    </table>
+</div>
+<button style="padding:10px;margin-top:5px;margin-bottom:5px;">@Html.ActionLink("DOWNLOAD", "ExportToExcelV", "Home", new { controller = "Home" })</button>
+
+
+
+

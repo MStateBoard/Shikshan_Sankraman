@@ -1,0 +1,123 @@
+﻿@model List<CopyOfShikshanSankraman.Models.Mahavidyalaya_tbl>
+@{
+    ViewBag.Title = "MahavidyalayaList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .fixTableHead thead th {
+        position: sticky;
+        top: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    /*/////////////////NavBar///////////////////////////////////////*/
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #152f49;
+    }
+
+    li {
+        float: left;
+    }
+
+        li a {
+            display: block;
+            padding: 8px;
+            color: white;
+        }
+
+    select {
+        color: white;
+        border: none;
+        width: 100px;
+        margin-top: 2px;
+        background-color: #152f49;
+    }
+</style>
+
+
+<h2>महाविद्यालय वर्गणीदार</h2>
+<div class="fixTableHead" style="overflow-x:scroll">
+    <table style="border: 5px;  ">
+        <thead>
+            <tr>
+                <th>Vargadar</th>
+                <th>SansthecheNav</th>
+                <th>MahavidyalayacheNav</th>
+                <th>SansthechaPatta</th>
+                <th>CityName</th>
+                <th>IndexNo</th>
+                <th>Taluka</th>
+                <th>Jhila</th>
+                <th>PincodeNo</th>
+                <th>Email</th>
+                <th>MobileNo1</th>
+                <th>MobileNo2</th>
+                <th>VarganiDate</th>
+                <th>Vargani</th>
+                <th>MonthStart</th>
+                <th>MonthEnd</th>
+
+
+            </tr>
+        </thead>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Vargadar</td>
+                <td>@item.SansthecheNav</td>
+                <td>@item.MahavidyalayacheNav</td>
+                <td>@item.SansthechaPatta</td>
+                <td>@item.CityName</td>
+                <td>@item.IndexNo</td>
+                <td>@item.Taluka</td>
+                <td>@item.Jhila</td>
+                <td>@item.PincodeNo</td>
+                <td>@item.Email</td>
+                <td>@item.MobileNo1</td>
+                <td>@item.MobileNo2</td>
+                <td>@item.VarganiDate</td>
+                <td>@item.Vargani</td>
+                <td>@item.MonthStart</td>
+                <td>@item.MonthEnd</td>
+
+
+
+
+
+            </tr>
+        }
+    </table>
+   
+</div>
+<button style="padding:10px;margin-top:5px;margin-bottom:5px;">@Html.ActionLink("DOWNLOAD", "ExportToExcel", "Home", new { controller = "Home" })</button>
+
+
+

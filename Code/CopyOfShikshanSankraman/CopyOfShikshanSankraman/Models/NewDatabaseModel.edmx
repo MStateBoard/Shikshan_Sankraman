@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NewDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin_tbl1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Year" Type="nvarchar" MaxLength="50" />
+          <Property Name="Month" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+          <Property Name="FileName" Type="varchar" MaxLength="50" />
+          <Property Name="DateTime" Type="smalldatetime" />
+          <Property Name="PdfUrl" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Contact_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="MiddleName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="EmailId" Type="varchar" MaxLength="100" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="100" />
+          <Property Name="Message" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Mahavidyalaya_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vargadar" Type="nvarchar(max)" />
+          <Property Name="SansthecheNav" Type="nvarchar(max)" />
+          <Property Name="MahavidyalayacheNav" Type="nvarchar(max)" />
+          <Property Name="SansthechaPatta" Type="nvarchar(max)" />
+          <Property Name="CityName" Type="nvarchar(max)" />
+          <Property Name="IndexNo" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="Jhila" Type="nvarchar(max)" />
+          <Property Name="PincodeNo" Type="nvarchar(max)" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+          <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+          <Property Name="Vargani" Type="nvarchar(max)" />
+          <Property Name="MonthStart" Type="nvarchar(max)" />
+          <Property Name="MonthEnd" Type="nvarchar(max)" />
+          <Property Name="Ip_Address" Type="nvarchar(max)" />
+          <Property Name="Date_Time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NewChitrakar_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+          <Property Name="AadharNo" Type="varchar" MaxLength="50" />
+          <Property Name="ChitrachaVishay" Type="nvarchar(max)" />
+          <Property Name="ShaikshanikPatrata" Type="nvarchar(max)" />
+          <Property Name="KaryalayachaPrakar" Type="nvarchar(max)" />
+          <Property Name="VyavasayikSthan" Type="nvarchar(max)" />
+          <Property Name="ChitraPrakashanStatus" Type="nvarchar(max)" />
+          <Property Name="Anubhav" Type="nvarchar(max)" />
+          <Property Name="KaryaratSthal" Type="nvarchar(max)" />
+          <Property Name="PrakashitChitra" Type="nvarchar(max)" />
+          <Property Name="PrakashitKashyamadhe" Type="nvarchar(max)" />
+          <Property Name="Vishay" Type="nvarchar(max)" />
+          <Property Name="AavadichaVishay" Type="nvarchar(max)" />
+          <Property Name="Payment" Type="nvarchar(max)" />
+          <Property Name="SamtiPatra" Type="nvarchar(max)" />
+          <Property Name="Chitra" Type="nvarchar(max)" />
+          <Property Name="Chitra2" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="NewKaryalay_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vargadar" Type="nvarchar(max)" />
+          <Property Name="SurnameOfHead" Type="nvarchar(max)" />
+          <Property Name="Nav" Type="nvarchar(max)" />
+          <Property Name="VadilancheNav" Type="nvarchar(max)" />
+          <Property Name="KaryalayacheNav" Type="nvarchar(max)" />
+          <Property Name="GharNav" Type="nvarchar(max)" />
+          <Property Name="RoadName" Type="nvarchar(max)" />
+          <Property Name="NearMark" Type="nvarchar(max)" />
+          <Property Name="CityName" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="Jhila" Type="nvarchar(max)" />
+          <Property Name="PincodeNo" Type="nvarchar(max)" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+          <Property Name="VarganiDate" Type="date" />
+          <Property Name="Vargani" Type="nvarchar(max)" />
+          <Property Name="MonthStart" Type="nvarchar(max)" />
+          <Property Name="MonthEnd" Type="nvarchar(max)" />
+          <Property Name="Ip_Address" Type="nvarchar(max)" />
+          <Property Name="Date_Time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NewVarganidar_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="FatherName" Type="nvarchar(max)" />
+          <Property Name="GharNav" Type="nvarchar(max)" />
+          <Property Name="RoadName" Type="nvarchar(max)" />
+          <Property Name="NearMark" Type="nvarchar(max)" />
+          <Property Name="CityName" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="Jhila" Type="nvarchar(max)" />
+          <Property Name="PincodeNo" Type="nvarchar(max)" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+          <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+          <Property Name="AadharCardNo" Type="varchar" MaxLength="50" />
+          <Property Name="MonthStart" Type="nvarchar(max)" />
+          <Property Name="MonthEnd" Type="nvarchar(max)" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="Varagani" Type="nvarchar(max)" />
+          <Property Name="Ip_Address" Type="nvarchar(max)" />
+          <Property Name="Date_Time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NewWriter_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+          <Property Name="AadharNo" Type="varchar" MaxLength="50" />
+          <Property Name="LekhachaVishay" Type="nvarchar(max)" />
+          <Property Name="ShaikshanikPatrata" Type="nvarchar(max)" />
+          <Property Name="KaryalayachaPrakar" Type="nvarchar(max)" />
+          <Property Name="VyavasaikSthan" Type="nvarchar(max)" />
+          <Property Name="LekhPrakashanStatus" Type="nvarchar(max)" />
+          <Property Name="Anubhav" Type="nvarchar(max)" />
+          <Property Name="KaryaratSthal" Type="nvarchar(max)" />
+          <Property Name="PrakashitLekh" Type="nvarchar(max)" />
+          <Property Name="PrakashitKashyamadhe" Type="nvarchar(max)" />
+          <Property Name="Vishay" Type="nvarchar(max)" />
+          <Property Name="AavadichaVishay" Type="nvarchar(max)" />
+          <Property Name="Payment" Type="nvarchar(max)" />
+          <Property Name="SamtiPatra" Type="nvarchar(max)" />
+          <Property Name="Lekh" Type="nvarchar(max)" />
+          <Property Name="Font" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Pratikriya_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+          <Property Name="Education" Type="nvarchar(max)" />
+          <Property Name="Varsh" Type="nvarchar(max)" />
+          <Property Name="Mahine" Type="nvarchar(max)" />
+          <Property Name="Pratikriya" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Registration_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="School_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vargadar" Type="nvarchar(max)" />
+          <Property Name="SansthecheNav" Type="nvarchar(max)" />
+          <Property Name="SchoolName" Type="nvarchar(max)" />
+          <Property Name="SansthechaPatta" Type="nvarchar(max)" />
+          <Property Name="SchoolAdd" Type="nvarchar(max)" />
+          <Property Name="CityName" Type="nvarchar(max)" />
+          <Property Name="IndexNo" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="Jhila" Type="nvarchar(max)" />
+          <Property Name="PincodeNo" Type="nvarchar(max)" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+          <Property Name="Vargani" Type="varchar" MaxLength="50" />
+          <Property Name="VarganiDate" Type="varchar" MaxLength="50" />
+          <Property Name="MonthStart" Type="nvarchar(max)" />
+          <Property Name="MonthEnd" Type="nvarchar(max)" />
+          <Property Name="Ip_Address" Type="nvarchar(max)" />
+          <Property Name="Date_Time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_Mandal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ino" Type="varchar" MaxLength="50" />
+          <Property Name="year" Type="nvarchar" MaxLength="50" />
+          <Property Name="month" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_id" Type="nvarchar(max)" />
+          <Property Name="tracking_id" Type="nvarchar(max)" />
+          <Property Name="bank_ref_no" Type="nvarchar(max)" />
+          <Property Name="order_status" Type="nvarchar(max)" />
+          <Property Name="failure_message" Type="nvarchar(max)" />
+          <Property Name="payment_mode" Type="nvarchar(max)" />
+          <Property Name="card_name" Type="nvarchar(max)" />
+          <Property Name="status_code" Type="nvarchar(max)" />
+          <Property Name="status_message" Type="nvarchar(max)" />
+          <Property Name="currency" Type="nvarchar(max)" />
+          <Property Name="amount_money" Type="nvarchar(max)" />
+          <Property Name="billing_name" Type="nvarchar(max)" />
+          <Property Name="billing_address" Type="nvarchar(max)" />
+          <Property Name="billing_city" Type="nvarchar(max)" />
+          <Property Name="billing_state" Type="nvarchar(max)" />
+          <Property Name="billing_zip" Type="nvarchar(max)" />
+          <Property Name="billing_country" Type="nvarchar(max)" />
+          <Property Name="billing_tel" Type="nvarchar(max)" />
+          <Property Name="billing_email" Type="nvarchar(max)" />
+          <Property Name="delivery_name" Type="nvarchar(max)" />
+          <Property Name="delivery_address" Type="nvarchar(max)" />
+          <Property Name="delivery_city" Type="nvarchar(max)" />
+          <Property Name="delivery_state" Type="nvarchar(max)" />
+          <Property Name="delivery_zip" Type="nvarchar(max)" />
+          <Property Name="delivery_country" Type="nvarchar(max)" />
+          <Property Name="delivery_tel" Type="nvarchar(max)" />
+          <Property Name="merchant_param1" Type="nvarchar(max)" />
+          <Property Name="merchant_param2" Type="nvarchar(max)" />
+          <Property Name="merchant_param3" Type="nvarchar(max)" />
+          <Property Name="merchant_param4" Type="nvarchar(max)" />
+          <Property Name="merchant_param5" Type="nvarchar(max)" />
+          <Property Name="vault" Type="nvarchar(max)" />
+          <Property Name="offer_type" Type="nvarchar(max)" />
+          <Property Name="offer_code" Type="nvarchar(max)" />
+          <Property Name="discount_value" Type="nvarchar(max)" />
+          <Property Name="mer_account" Type="nvarchar(max)" />
+          <Property Name="eci_value" Type="nvarchar(max)" />
+          <Property Name="retry" Type="nvarchar(max)" />
+          <Property Name="response_code" Type="nvarchar(max)" />
+          <Property Name="billing_notes" Type="nvarchar(max)" />
+          <Property Name="trans_date" Type="nvarchar(max)" />
+          <Property Name="bin_country" Type="nvarchar(max)" />
+          <Property Name="active" Type="int" />
+        </EntityType>
+        <EntityContainer Name="NewDatabaseModelStoreContainer">
+          <EntitySet Name="Admin_tbl1" EntityType="Self.Admin_tbl1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact_tbl" EntityType="Self.Contact_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mahavidyalaya_tbl" EntityType="Self.Mahavidyalaya_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewChitrakar_tbl" EntityType="Self.NewChitrakar_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewKaryalay_tbl" EntityType="Self.NewKaryalay_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewVarganidar_tbl" EntityType="Self.NewVarganidar_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewWriter_tbl" EntityType="Self.NewWriter_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pratikriya_tbl" EntityType="Self.Pratikriya_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Registration_tbl" EntityType="Self.Registration_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="School_tbl" EntityType="Self.School_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Mandal" EntityType="Self.Tbl_Mandal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_payment" EntityType="Self.Tbl_payment" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NewDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NewWriter_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AadharNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LekhachaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShaikshanikPatrata" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KaryalayachaPrakar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VyavasaikSthan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LekhPrakashanStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Anubhav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KaryaratSthal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrakashitLekh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrakashitKashyamadhe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Vishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AavadichaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SamtiPatra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lekh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Font" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="NewDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NewWriter_tbl" EntityType="Self.NewWriter_tbl" />
+          <EntitySet Name="NewChitrakar_tbl" EntityType="NewDatabaseModel.NewChitrakar_tbl" />
+          <EntitySet Name="School_tbl" EntityType="NewDatabaseModel.School_tbl" />
+          <EntitySet Name="Mahavidyalaya_tbl" EntityType="NewDatabaseModel.Mahavidyalaya_tbl" />
+          <EntitySet Name="NewVarganidar_tbl" EntityType="NewDatabaseModel.NewVarganidar_tbl" />
+          <EntitySet Name="Pratikriya_tbl" EntityType="NewDatabaseModel.Pratikriya_tbl" />
+          <EntitySet Name="Contact_tbl" EntityType="NewDatabaseModel.Contact_tbl" />
+          <EntitySet Name="Admin_tbl1" EntityType="NewDatabaseModel.Admin_tbl1" />
+          <EntitySet Name="Tbl_payment" EntityType="NewDatabaseModel.Tbl_payment" />
+          <EntitySet Name="NewKaryalay_tbl" EntityType="NewDatabaseModel.NewKaryalay_tbl" />
+          <EntitySet Name="Tbl_Mandal" EntityType="NewDatabaseModel.Tbl_Mandal" />
+          <EntitySet Name="Registration_tbl" EntityType="NewDatabaseModel.Registration_tbl" />
+        </EntityContainer>
+        <EntityType Name="NewChitrakar_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AadharNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChitrachaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShaikshanikPatrata" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KaryalayachaPrakar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VyavasayikSthan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChitraPrakashanStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Anubhav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KaryaratSthal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrakashitChitra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrakashitKashyamadhe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Vishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AavadichaVishay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SamtiPatra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Chitra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Chitra2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="School_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vargadar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SansthecheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SchoolName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SansthechaPatta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SchoolAdd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IndexNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VarganiDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Vargani" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Time" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Mahavidyalaya_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vargadar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SansthecheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MahavidyalayacheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SansthechaPatta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IndexNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VarganiDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Vargani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Time" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="NewVarganidar_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GharNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RoadName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NearMark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VarganiDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AadharCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Varagani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Time" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Pratikriya_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Education" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Varsh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mahine" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pratikriya" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Admin_tbl1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Month" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateTime" Type="DateTime" Precision="0" />
+          <Property Name="PdfUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tracking_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bank_ref_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="order_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="failure_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="payment_mode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="card_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="currency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="amount_money" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_zip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_zip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="merchant_param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="merchant_param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="merchant_param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="merchant_param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="merchant_param5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vault" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="offer_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="offer_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="discount_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mer_account" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="eci_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="retry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="response_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billing_notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="trans_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bin_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="NewKaryalay_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vargadar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SurnameOfHead" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VadilancheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KaryalayacheNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GharNav" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RoadName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NearMark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Jhila" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PincodeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VarganiDate" Type="DateTime" Precision="0" />
+          <Property Name="Vargani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MonthStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MonthEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ip_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Time" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Tbl_Mandal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ino" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="month" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Registration_tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NewDatabaseModelStoreContainer" CdmEntityContainer="NewDatabaseEntities1">
+          <EntitySetMapping Name="NewWriter_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.NewWriter_tbl">
+              <MappingFragment StoreEntitySet="NewWriter_tbl">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+                <ScalarProperty Name="LekhachaVishay" ColumnName="LekhachaVishay" />
+                <ScalarProperty Name="ShaikshanikPatrata" ColumnName="ShaikshanikPatrata" />
+                <ScalarProperty Name="KaryalayachaPrakar" ColumnName="KaryalayachaPrakar" />
+                <ScalarProperty Name="VyavasaikSthan" ColumnName="VyavasaikSthan" />
+                <ScalarProperty Name="LekhPrakashanStatus" ColumnName="LekhPrakashanStatus" />
+                <ScalarProperty Name="Anubhav" ColumnName="Anubhav" />
+                <ScalarProperty Name="KaryaratSthal" ColumnName="KaryaratSthal" />
+                <ScalarProperty Name="PrakashitLekh" ColumnName="PrakashitLekh" />
+                <ScalarProperty Name="PrakashitKashyamadhe" ColumnName="PrakashitKashyamadhe" />
+                <ScalarProperty Name="Vishay" ColumnName="Vishay" />
+                <ScalarProperty Name="AavadichaVishay" ColumnName="AavadichaVishay" />
+                <ScalarProperty Name="Payment" ColumnName="Payment" />
+                <ScalarProperty Name="SamtiPatra" ColumnName="SamtiPatra" />
+                <ScalarProperty Name="Lekh" ColumnName="Lekh" />
+                <ScalarProperty Name="Font" ColumnName="Font" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewChitrakar_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.NewChitrakar_tbl">
+              <MappingFragment StoreEntitySet="NewChitrakar_tbl">
+                <ScalarProperty Name="Chitra2" ColumnName="Chitra2" />
+                <ScalarProperty Name="Chitra" ColumnName="Chitra" />
+                <ScalarProperty Name="SamtiPatra" ColumnName="SamtiPatra" />
+                <ScalarProperty Name="Payment" ColumnName="Payment" />
+                <ScalarProperty Name="AavadichaVishay" ColumnName="AavadichaVishay" />
+                <ScalarProperty Name="Vishay" ColumnName="Vishay" />
+                <ScalarProperty Name="PrakashitKashyamadhe" ColumnName="PrakashitKashyamadhe" />
+                <ScalarProperty Name="PrakashitChitra" ColumnName="PrakashitChitra" />
+                <ScalarProperty Name="KaryaratSthal" ColumnName="KaryaratSthal" />
+                <ScalarProperty Name="Anubhav" ColumnName="Anubhav" />
+                <ScalarProperty Name="ChitraPrakashanStatus" ColumnName="ChitraPrakashanStatus" />
+                <ScalarProperty Name="VyavasayikSthan" ColumnName="VyavasayikSthan" />
+                <ScalarProperty Name="KaryalayachaPrakar" ColumnName="KaryalayachaPrakar" />
+                <ScalarProperty Name="ShaikshanikPatrata" ColumnName="ShaikshanikPatrata" />
+                <ScalarProperty Name="ChitrachaVishay" ColumnName="ChitrachaVishay" />
+                <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="School_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.School_tbl">
+              <MappingFragment StoreEntitySet="School_tbl">
+                <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+                <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+                <ScalarProperty Name="Vargani" ColumnName="Vargani" />
+                <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+                <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+                <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+                <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="IndexNo" ColumnName="IndexNo" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="SchoolAdd" ColumnName="SchoolAdd" />
+                <ScalarProperty Name="SansthechaPatta" ColumnName="SansthechaPatta" />
+                <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+                <ScalarProperty Name="SansthecheNav" ColumnName="SansthecheNav" />
+                <ScalarProperty Name="Vargadar" ColumnName="Vargadar" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mahavidyalaya_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.Mahavidyalaya_tbl">
+              <MappingFragment StoreEntitySet="Mahavidyalaya_tbl">
+                <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+                <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+                <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+                <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+                <ScalarProperty Name="Vargani" ColumnName="Vargani" />
+                <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+                <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="IndexNo" ColumnName="IndexNo" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="SansthechaPatta" ColumnName="SansthechaPatta" />
+                <ScalarProperty Name="MahavidyalayacheNav" ColumnName="MahavidyalayacheNav" />
+                <ScalarProperty Name="SansthecheNav" ColumnName="SansthecheNav" />
+                <ScalarProperty Name="Vargadar" ColumnName="Vargadar" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewVarganidar_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.NewVarganidar_tbl">
+              <MappingFragment StoreEntitySet="NewVarganidar_tbl">
+                <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+                <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+                <ScalarProperty Name="Varagani" ColumnName="Varagani" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+                <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+                <ScalarProperty Name="AadharCardNo" ColumnName="AadharCardNo" />
+                <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+                <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="NearMark" ColumnName="NearMark" />
+                <ScalarProperty Name="RoadName" ColumnName="RoadName" />
+                <ScalarProperty Name="GharNav" ColumnName="GharNav" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pratikriya_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.Pratikriya_tbl">
+              <MappingFragment StoreEntitySet="Pratikriya_tbl">
+                <ScalarProperty Name="Pratikriya" ColumnName="Pratikriya" />
+                <ScalarProperty Name="Mahine" ColumnName="Mahine" />
+                <ScalarProperty Name="Varsh" ColumnName="Varsh" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contact_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.Contact_tbl">
+              <MappingFragment StoreEntitySet="Contact_tbl">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admin_tbl1">
+            <EntityTypeMapping TypeName="NewDatabaseModel.Admin_tbl1">
+              <MappingFragment StoreEntitySet="Admin_tbl1">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="PdfUrl" ColumnName="PdfUrl" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_payment">
+            <EntityTypeMapping TypeName="NewDatabaseModel.Tbl_payment">
+              <MappingFragment StoreEntitySet="Tbl_payment">
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="bin_country" ColumnName="bin_country" />
+                <ScalarProperty Name="trans_date" ColumnName="trans_date" />
+                <ScalarProperty Name="billing_notes" ColumnName="billing_notes" />
+                <ScalarProperty Name="response_code" ColumnName="response_code" />
+                <ScalarProperty Name="retry" ColumnName="retry" />
+                <ScalarProperty Name="eci_value" ColumnName="eci_value" />
+                <ScalarProperty Name="mer_account" ColumnName="mer_account" />
+                <ScalarProperty Name="discount_value" ColumnName="discount_value" />
+                <ScalarProperty Name="offer_code" ColumnName="offer_code" />
+                <ScalarProperty Name="offer_type" ColumnName="offer_type" />
+                <ScalarProperty Name="vault" ColumnName="vault" />
+                <ScalarProperty Name="merchant_param5" ColumnName="merchant_param5" />
+                <ScalarProperty Name="merchant_param4" ColumnName="merchant_param4" />
+                <ScalarProperty Name="merchant_param3" ColumnName="merchant_param3" />
+                <ScalarProperty Name="merchant_param2" ColumnName="merchant_param2" />
+                <ScalarProperty Name="merchant_param1" ColumnName="merchant_param1" />
+                <ScalarProperty Name="delivery_tel" ColumnName="delivery_tel" />
+                <ScalarProperty Name="delivery_country" ColumnName="delivery_country" />
+                <ScalarProperty Name="delivery_zip" ColumnName="delivery_zip" />
+                <ScalarProperty Name="delivery_state" ColumnName="delivery_state" />
+                <ScalarProperty Name="delivery_city" ColumnName="delivery_city" />
+                <ScalarProperty Name="delivery_address" ColumnName="delivery_address" />
+                <ScalarProperty Name="delivery_name" ColumnName="delivery_name" />
+                <ScalarProperty Name="billing_email" ColumnName="billing_email" />
+                <ScalarProperty Name="billing_tel" ColumnName="billing_tel" />
+                <ScalarProperty Name="billing_country" ColumnName="billing_country" />
+                <ScalarProperty Name="billing_zip" ColumnName="billing_zip" />
+                <ScalarProperty Name="billing_state" ColumnName="billing_state" />
+                <ScalarProperty Name="billing_city" ColumnName="billing_city" />
+                <ScalarProperty Name="billing_address" ColumnName="billing_address" />
+                <ScalarProperty Name="billing_name" ColumnName="billing_name" />
+                <ScalarProperty Name="amount_money" ColumnName="amount_money" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="status_message" ColumnName="status_message" />
+                <ScalarProperty Name="status_code" ColumnName="status_code" />
+                <ScalarProperty Name="card_name" ColumnName="card_name" />
+                <ScalarProperty Name="payment_mode" ColumnName="payment_mode" />
+                <ScalarProperty Name="failure_message" ColumnName="failure_message" />
+                <ScalarProperty Name="order_status" ColumnName="order_status" />
+                <ScalarProperty Name="bank_ref_no" ColumnName="bank_ref_no" />
+                <ScalarProperty Name="tracking_id" ColumnName="tracking_id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewKaryalay_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.NewKaryalay_tbl">
+              <MappingFragment StoreEntitySet="NewKaryalay_tbl">
+                <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+                <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+                <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+                <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+                <ScalarProperty Name="Vargani" ColumnName="Vargani" />
+                <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+                <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="NearMark" ColumnName="NearMark" />
+                <ScalarProperty Name="RoadName" ColumnName="RoadName" />
+                <ScalarProperty Name="GharNav" ColumnName="GharNav" />
+                <ScalarProperty Name="KaryalayacheNav" ColumnName="KaryalayacheNav" />
+                <ScalarProperty Name="VadilancheNav" ColumnName="VadilancheNav" />
+                <ScalarProperty Name="Nav" ColumnName="Nav" />
+                <ScalarProperty Name="SurnameOfHead" ColumnName="SurnameOfHead" />
+                <ScalarProperty Name="Vargadar" ColumnName="Vargadar" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Mandal">
+            <EntityTypeMapping TypeName="NewDatabaseModel.Tbl_Mandal">
+              <MappingFragment StoreEntitySet="Tbl_Mandal">
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="month" ColumnName="month" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="ino" ColumnName="ino" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registration_tbl">
+            <EntityTypeMapping TypeName="NewDatabaseModel.Registration_tbl">
+              <MappingFragment StoreEntitySet="Registration_tbl">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

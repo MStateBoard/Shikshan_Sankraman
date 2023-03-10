@@ -1,0 +1,150 @@
+﻿@model List<CopyOfShikshanSankraman.Models.NewKaryalay_tbl>
+@{
+    ViewBag.Title = "KarayalayList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .fixTableHead thead th {
+        position: sticky;
+        top: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+</style>
+
+
+
+<h2>कार्यालय वर्गणीदार</h2>
+<div class="fixTableHead" style="overflow-x:scroll">
+    <table style="border: 5px;  ">
+        <thead>
+            <tr>
+                <th>Vargadar</th>
+                <th>SurnameOfHead</th>
+                <th>Nav</th>
+                <th>VadilancheNav</th>
+                <th>KaryalayacheNav</th>
+                <th>GharNav</th>
+                <th>RoadName</th>
+                <th>NearMark</th>
+                <th>CityName</th>
+                <th>Taluka</th>
+                <th>Jhila</th>
+                <th>PincodeNo</th>
+                <th>Email</th>
+                <th>MobileNo1</th>
+                <th>MobileNo2</th>
+                <th>VarganiDate</th>
+                <th>Vargani</th>
+                <th>MonthStart</th>
+                <th>MonthEnd</th>
+
+            </tr>
+        </thead>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Vargadar</td>
+                <td>@item.SurnameOfHead</td>
+                <td>@item.Nav</td>
+                <td>@item.VadilancheNav</td>
+                <td>@item.KaryalayacheNav</td>
+                <td>@item.GharNav</td>
+                <td>@item.RoadName</td>
+                <td>@item.NearMark</td>
+                <td>@item.CityName</td>
+                <td>@item.Taluka</td>
+                <td>@item.Jhila</td>
+                <td>@item.PincodeNo</td>
+                <td>@item.Email</td>
+                <td>@item.MobileNo1</td>
+                <td>@item.MobileNo2</td>
+                <td>@item.VarganiDate</td>
+                <td>@item.Vargani</td>
+                <td>@item.MonthStart</td>
+                <td>@item.MonthEnd</td>
+
+
+
+
+
+            </tr>
+        }
+    </table>
+</div>
+<button style="padding:10px;margin-top:5px;margin-bottom:5px;">@Html.ActionLink("DOWNLOAD", "ExportToExcelK", "Home", new { controller = "Home" })</button>
+@*<script>
+        function SelectRedirect() {
+
+
+            switch (document.getElementById('s1').value) {
+                case "शाळा":
+                    window.location = "../Login/MadhyamikShalaList";
+                    break;
+
+                case "महाविद्यालय":
+                    window.location = "../Login/MahavidyalayaList";
+                    break;
+
+                case "कार्यालय":
+                    window.location = "../Login/KarayalayList";
+                    break;
+                case "वर्गणीदार":
+                    window.location = "../Login/VaraganidarList";
+                    break;
+
+                case "लेखक":
+                    window.location = "../Login/WriterList";
+                    break;
+                case "चित्रकार":
+                    window.location = "../Login/ChitrakarList";
+                    break;
+
+                default:
+                    window.location = "../";
+                    break;
+            }
+        }
+        //////////////////
+    </script>
+    <ul>
+        <li><a href="../Login/WriterList">लेखक यादी</a></li>
+        <li><a href="../Login/ChitrakarList">चित्रकार यादी</a></li>
+        <li>
+            <SELECT id="s1" NAME="section" onChange="SelectRedirect();">
+                <Option> पेमेंट यादी </Option>
+                <Option value="शाळा">माध्यमिक शाळा</Option>
+                <Option value="महाविद्यालय">कनिष्ट महाविद्यालय/उच्च्य माध्यमिक  शाळा</Option>
+                <Option value="कार्यालय">कार्यालय</Option>
+                <Option value="वर्गणीदार">वयक्तिक वर्गणीदार</Option>
+                <Option value="लेखक">लेखक</Option>
+                <Option value="चित्रकार">चित्रकार</Option>
+            </SELECT>
+        </li>
+
+
+    </ul>*@
+
+
+

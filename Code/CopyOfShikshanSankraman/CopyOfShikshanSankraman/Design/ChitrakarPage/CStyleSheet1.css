@@ -1,0 +1,63 @@
+﻿div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 105%;
+    vertical-align: baseline;
+}
+
+
+.border-line {
+    background: none repeat scroll 0 0 #DDDDDD;
+    clear: both;
+    height: 1px;
+    margin: 1.2em 0;
+    width: 100%;
+}
+
+.sidebar-right .sidebar {
+    float: right;
+    margin-top: 20px;
+}
+
+.sidebar a {
+    font-size: 15px;
+    font-weight: 800;
+    color: #989a14;
+}
+.sidebar .widget-icon-text img {
+    margin-left: -60px;
+    float: left;
+    padding-top: 2px;
+    font-size: 48px;
+    color: #000;
+    margin-top: 0px;
+}
+
+.sidebar .widget-icon-text h3 {
+    border-left: 0px;
+    padding-left: 0px;
+    font-weight: 800;
+    font-size: 15px;
+}
+.content-home p{
+    color: black;
+}
+#content-home h3 {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 0 30px;
+    color: #425262;
+    text-align: center;
+    padding: 0 20px;
+    font-style: normal;
+}
+
+#content-home {
+    margin-left: 160px;
+    padding-left: 50px;
+    padding-right: 50px;
+}

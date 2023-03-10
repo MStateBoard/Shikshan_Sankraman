@@ -1,0 +1,95 @@
+﻿@model List<CopyOfShikshanSankraman.Models.NewWriter_tbl>
+@{
+    ViewBag.Title = "WriterList";
+}
+
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .fixTableHead thead th {
+        position: sticky;
+        top: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+</style>
+<h2>WriterList</h2>
+<div class="fixTableHead" style="overflow-x:scroll">
+    <table style="border: 5px;  ">
+        <thead>
+            <tr>
+                <th>FullName</th>
+                <th>EmailId</th>
+                <th>MobileNo1</th>
+                <th>MobileNo2</th>
+                <th>AadharNo</th>
+                <th>LekhachaVishay</th>
+                <th>ShaikshanikPatrata</th>
+                <th>KaryalayachaPrakar</th>
+                <th>VyavasayikSthan</th>
+                <th>LekhPrakashanStatus</th>
+                <th>Anubhav</th>
+                <th>KaryaratSthal</th>
+                <th>PrakashitLekh</th>
+                <th>PrakashitKashyamadhe</th>
+                <th>Vishay</th>
+                <th>AavadichaVishay</th>
+                <th>Payment</th>
+                <th>SamtiPatra</th>
+                <th>Lekh</th>
+                <th>Font</th>
+
+            </tr>
+        </thead>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FullName</td>
+                <td>@item.EmailId</td>
+                <td>@item.MobileNo1</td>
+                <td>@item.MobileNo2</td>
+                <td>@item.AadharNo</td>
+                <td>@item.LekhachaVishay</td>
+                <td>@item.ShaikshanikPatrata</td>
+                <td>@item.KaryalayachaPrakar</td>
+                <td>@item.VyavasaikSthan</td>
+                <td>@item.LekhPrakashanStatus</td>
+                <td>@item.Anubhav</td>
+                <td>@item.KaryaratSthal</td>
+                <td>@item.PrakashitLekh</td>
+                <td>@item.PrakashitKashyamadhe</td>
+                <td>@item.Vishay</td>
+                <td>@item.AavadichaVishay</td>
+                <td>@item.Payment</td>
+
+
+                <td>@Html.ActionLink("Downlaod", "WDownloadFile", new { id = item.Id })     </td>
+
+                <td>
+                    @Html.ActionLink("Downlaod", "WDownloadFile1", new { id = item.Id })
+                </td>
+                <td>
+                    @Html.ActionLink("Downlaod", "WDownloadFile2", new { id = item.Id })
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
+

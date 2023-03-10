@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewChitrakarDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NewChitrakar_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo1" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo2" Type="varchar" MaxLength="50" />
+    <Property Name="AadharNo" Type="varchar" MaxLength="50" />
+    <Property Name="ChitrachaVishay" Type="varchar" MaxLength="50" />
+    <Property Name="ShaikshanikPatrata" Type="varchar" MaxLength="50" />
+    <Property Name="KaryalayachaPrakar" Type="nvarchar(max)" />
+    <Property Name="VyavasayikSthan" Type="nvarchar(max)" />
+    <Property Name="ChitraPrakashanStatus" Type="nvarchar(max)" />
+    <Property Name="Anubhav" Type="varchar" MaxLength="50" />
+    <Property Name="KaryaratSthal" Type="varchar" MaxLength="50" />
+    <Property Name="PrakashitChitra" Type="varchar" MaxLength="50" />
+    <Property Name="PrakashitKashyamadhe" Type="varchar" MaxLength="50" />
+    <Property Name="Vishay" Type="varchar" MaxLength="50" />
+    <Property Name="AavadichaVishay" Type="varchar" MaxLength="50" />
+    <Property Name="Payment" Type="varchar" MaxLength="50" />
+    <Property Name="SamtiPatra" Type="nvarchar(max)" />
+    <Property Name="Chitra" Type="nvarchar(max)" />
+    <Property Name="Chitra2" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="NewChitrakarDbModelStoreContainer">
+    <EntitySet Name="NewChitrakar_tbl" EntityType="Self.NewChitrakar_tbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

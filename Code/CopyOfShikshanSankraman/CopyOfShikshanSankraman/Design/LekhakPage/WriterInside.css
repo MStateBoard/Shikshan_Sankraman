@@ -1,0 +1,42 @@
+﻿.col-lg-7{
+    margin-left:250px;
+}
+/*
+select {
+    width: 300px;
+    height: 20px;
+    font-size: 12px;
+    padding-top: 0px;
+}
+*/
+
+
+.container #info #ui .form-group .row .col-lg-6 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+.container .form-group input {
+    height: 30px;
+}
+select {
+    width: 250px;
+    height: 20px;
+    font-size: 12px;
+    padding-top: 0px;
+}
+.row .newclass{
+    outline:none;
+}
+h4{
+    margin-top:30px;
+    font-size:18px;
+    margin-left:350px;
+    float:left;
+}
+h4 a{
+    font-size:16px;
+    font-style:normal;
+    font-weight:800;
+}

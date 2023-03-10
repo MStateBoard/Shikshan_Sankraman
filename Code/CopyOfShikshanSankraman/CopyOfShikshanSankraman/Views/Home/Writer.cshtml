@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Writer";
+}
+
+<link href="~/Design/LekhakPage/WriterStyle.css" rel="stylesheet" />
+
+<div id="UpdatePanel1">
+
+    <div class="slogan">
+        <h2 style="color:#425262; "> लेखकांसाठी</h2>
+        <br />
+    </div>
+
+    <div id="primary" class="sidebar-right">
+        <div class="container group">
+            <div class=" row">
+                <div id="content-home" class="span9 content group">
+                    <div class="page type-page status-publish hentry group">
+                        <h3 style="color:#000000">
+                            महाराष्ट्र  राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळाच्या 'शिक्षण संक्रमण' वेबसाईट वर आपले स्वागत....!
+
+
+                        </h3>
+
+                        <p style="font-size:15px">
+                            महाराष्ट्र  राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळामार्फत दरमहा 'शिक्षण संक्रमण' शैक्षणिक मासिक प्रकाशित
+                            केले जाते , हे आपणास विदित आहे. शिक्षणासाठी बदलत्या  विचारप्रवाहांचे  आद्ययावत ज्ञान देणारे 'शिक्षण संक्रमन' हे
+                            राज्यमंडळाचा आरसा आहे.
+                        </p>
+                        
+                        <p style="font-size:15px ">
+                            'शिक्षण संक्रमण' मधून अभ्यासू शिक्षक, लेखक यांचे उत्तम , वैचारिक साहित्य प्रसिध्द केले जाते. या अंकासाठी  विद्यार्थी ,पालक व  शिक्षकांना
+                            साहित्य पाठविण्याचे आवाहन करण्यात येत आहे.शिक्षक कुशल  अध्यापक , अनुभवी , व्यासंगी , बहुश्रुत आहेतच.
+                            शिक्षकांनी शालेय विषयाशी निगडीत , विद्यार्थी व शिक्षकांना  प्रगल्भ करनारे , त्यांच्या गुणात्मक विकास करनारे आपले  स्वलिखित साहित्य
+                            अंकासाठी पाठवावे . ते 'शिक्षण संक्रमन' च्या अंकात  प्रकाशित केले  जाईल .पुनरुचित  अभ्यासक्रम , मुल्यमापन  पद्धती विषयनिहाय
+                            पठ्यपुस्तकातिल आशय ,अद्ध्यापन  पध्द्ती विषयनिहाय पाठ्यपुस्तकातिल आशय , अध्द्यापन पध्दती , शालेय
+                            उपक्रम या विषयांवर आपले विचार व्यक्त व्हावेत . अर्थात याशिवाय शिक्षक व विद्यार्थी यांचे शालेय हित लक्षात  घेऊन  शैक्षणिक विषयावर
+                            लेख  पाठवावेत ; त्यांचे स्वागतच होईल.
+                        </p>
+
+
+
+                        <p style="font-size:15px">
+                        आलेल्या लेखातून निवडक लेखांवर , संपादक मंडळाकडून आवश्यक ते संस्कार करुनच लेख प्रकाशित केले जातील , याची
+                        लेखकांनी नोंद घ्यावी.
+                        </p>
+                    </div>
+                    <div id="comments"></div>
+                </div>
+                <!----End content-->
+                <!----Start sideBar-->
+                <div id="sidebar-homeiv" class="span3 sidebar group" @*style="margin-left:800px"*@>
+                    <div class="widget-1 widget-first widget widget-icon-text group">
+                        <img class="imgicon" src="~/Design/LekhakPage/smily.png" />
+                        <h3 style="font-size:15px; font-weight:800; color:#020c45"> लेखकांनी लेख पाठवण्यासाठी येथे <br />
+                            <a   >@Html.ActionLink("क्लिक करावे.", "WriterInside", "Home", new { controller = "Home" }) </a>
+                        
+                        </h3>
+                    </div> 
+                </div>
+                <!---End sidebar-->
+                <!----start extra content-->
+                <div class="extra-content margin-top group span12">
+                    <div class="border-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>

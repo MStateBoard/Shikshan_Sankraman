@@ -1,0 +1,272 @@
+﻿@model CopyOfShikshanSankraman.Models.Contact_tbl
+
+@{
+    ViewBag.Title = "Contact";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+@*<link href="~/Design/SamparkPage/StyleSheet.css" rel="stylesheet" />
+    <script src="~/Design/js/ContactInfo.js"></script>*@
+<style>
+    .navbar-nav {
+        float: none;
+    }
+    input[type="text"] {
+        height: 30px;
+        width: 210px;
+        margin-right:50px;
+    }
+
+    textarea {
+        width: 300px;
+    }
+    #gfgd{
+        width:250px;
+    }
+    
+   /* iframe {
+        display: block;
+        width: 90%;
+        max-width: 120rem;
+        height: 25em;
+        margin: 2rem auto;
+        border: 1px solid black;
+    }*/
+
+    pre {
+        text-align: center;
+        width: 90%;
+        max-width: 60rem;
+        margin: 0 auto;
+        background: #eee;
+        padding: 2rem;
+        border: 1px solid #000;
+    }
+
+    #sty {
+        padding-left: 10px;
+    }
+</style>
+@if (TempData["Msg"] != null)
+{
+    <h4 style="color:red">@TempData["Msg"].ToString()</h4>
+}
+@*<style>
+        label {
+            margin-right: 200px;
+        }
+    </style>*@
+
+<div id="UpdatePanel1">
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.187797254101!2d73.8289105147885!3d18.520413774013004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf84b8828f7d%3A0xe45152bfd7d0d162!2sBalchitravani!5e0!3m2!1sen!2sin!4v1649482693992!5m2!1sen!2sin"
+                width="600"
+                @*width="1600"*@ height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+        <div class="map-overlay-top"></div>
+        <div class="map-overlay-bottom"></div>
+    </div>
+
+    <div class="slogan">
+        <h2 style="font-weight: bold; margin-top: 80px"> माहितीसाठी  संपर्क</h2>
+
+    </div>
+
+
+    @*-----Start of contact Form*@
+    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+    {
+
+
+        @Html.AntiForgeryToken()
+        <div class="container">
+            <div class="row" id="sty">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FirstName, "पहिले नाव :", htmlAttributes: new { @class = "control-label" })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MiddleName, "मधले नाव :", htmlAttributes: new { @class = "control-label" })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LastName, "शेवटचे नाव :", htmlAttributes: new { @class = "control-label" })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.EmailId, "ई-मेल आडी:", htmlAttributes: new { @class = "control-label" })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control", @id = "gfgd" } })
+                        @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MobileNo, "मोबाईल नंबर:", htmlAttributes: new { @class = "control-label " })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.EditorFor(model => model.MobileNo, new { htmlAttributes = new { @class = "form-control" , @id="gfgd"} })
+                        @Html.ValidationMessageFor(model => model.MobileNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" id="sty">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Message, "मेसेज :", htmlAttributes: new { @class = "control-label " })
+                        <span class="required" style="color:red;font-weight:bold">*</span>
+                        @Html.TextAreaFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @id = "gfgd" } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-horizontal ">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <br /> <br /> <br />
+            <div class="form-group" align="center">
+
+                <div class="form-group">
+                    <div class="col-md-offset-5 col-md-2">
+                        <input type="submit" value="submit" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*<div class="container">
+            <div class="row">
+
+                <div class="col-lg-7" id="Info">
+                    <div id="ui">
+                        <form class="form-group">
+
+
+
+                                <div class="row">
+
+
+                                    <div class="col-lg-4">
+                                        <label>पहिले नाव </label>
+                                        <input type="text" name="FirstName" class="form-control" id="FirstName" pattern="[a-z A-Z]{1,}" required />
+                                        <p id="p1"></p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label>मधले नाव </label>
+                                        <input type="text" name="MiddleName" class="form-control" id="MiddleName" pattern="[a-z A-Z]{1,}" required />
+                                        <p id="p2"></p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label>शेवटचे नाव </label>
+                                        <input type="text" name="LastName" class="form-control" id="LastName" pattern="[a-z A-Z]{1,}" required />
+                                        <p id="p3"></p>
+                                    </div>*@
+        @*<div class="col-lg-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LastName, "शेवटचे नाव", htmlAttributes: new { @class = "control-label" })
+
+                    @Html.TextBoxFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @id = "LastName" } })
+                </div>
+            </div>*@
+        @*</div>
+
+                                    <div></div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <label>ईमेल </label>
+                                            <input type="email" name="EmailId" class="form-control" id="EmailId" required />
+                                            <p id="p4"></p>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <label>मोबाईल</label>
+                                            <input type="text" name="MobileNo" class="form-control" id="MobileNo" pattern="[7-9]{1}[0-9]{9}" required />
+                                            <p id="p5"></p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Message, "Message", htmlAttributes: new { @class = "control-label" })
+                                                <span class="required" style="color:red;font-weight:bold">*</span>
+                                                @Html.TextAreaFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="height:10px;"></div>
+                                    <button type="submit" style="margin-left:100px">पाठवा</button>
+
+
+                                </form>
+                       </div>
+                    </div>
+
+                </div>
+            </div>*@
+    }
+
+
+    <div id="sidebar-contact" class="span3 sidebar group">
+        <div class="widget-first widget contact-info">
+            <div class="sidebar-nav">
+                <ul>
+                    <li>
+                        <i class="glyphicon glyphicon-map-marker" style="color:#000;font-size:12px;width:12px;height:12px;"></i>
+                        <span>पत्ता:</span>
+                    </li>
+                    <li>महाराष्ट्र  राज्य माध्यमिक व उच्च्य माध्यमिक मंडल</li>
+                    <li>सर्वे न.832-ए, फायनल  प्लॉट न.178 व 179,</li>
+                    <li>बालचित्रवाणी जवळ,आगारकर रिसर्च  सेंटर च्या मागे </li>
+                    <li> भांबुर्डा ,शिवाजीनगर  ,पुणे-411 004.  महाराष्ट्र(भारत)</li>
+                    <li>
+                        <i class="glyphicon glyphicon-phone" style="color:#000;font-size:12px;width:12px;height:12px;"></i>
+                        <span>फोन:</span>
+                        "020-2570500"
+                    </li>
+                    <li>
+                        <i class="glyphicon glyphicon-envelope" style="color:#000;font-size:12px;width:12px;height:12px;"></i>
+                        <span>ईमेल:</span>
+                        "shikshan.sankraman@gmail.com"
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>

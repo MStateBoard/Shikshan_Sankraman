@@ -1,0 +1,21 @@
+﻿
+
+
+.wrapper{
+    width:100%;
+}
+.wrapper .carousel{
+    max-width:1200px;
+    margin:auto;
+    padding:0 30px;
+}
+.carousel .card{
+    background:red;
+    line-height:250px;
+    text-align:center;
+    color:#fff;
+    font-size:90px;
+    font-weight:600;
+    margin: 20px 0;
+
+}

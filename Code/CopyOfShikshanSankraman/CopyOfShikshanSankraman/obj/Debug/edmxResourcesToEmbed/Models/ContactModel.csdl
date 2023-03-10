@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContactDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contact_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ContactDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contact_tbl" EntityType="Self.Contact_tbl" />
+  </EntityContainer>
+</Schema>

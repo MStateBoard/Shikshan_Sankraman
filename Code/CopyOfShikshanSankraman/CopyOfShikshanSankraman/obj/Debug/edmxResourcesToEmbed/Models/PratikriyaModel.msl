@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PratikriyaDbModelStoreContainer" CdmEntityContainer="PratikriyaDbEntities">
+    <EntitySetMapping Name="Pratikriya_tbl">
+      <EntityTypeMapping TypeName="PratikriyaDbModel.Pratikriya_tbl">
+        <MappingFragment StoreEntitySet="Pratikriya_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Varsh" ColumnName="Varsh" />
+          <ScalarProperty Name="Mahine" ColumnName="Mahine" />
+          <ScalarProperty Name="Pratikriya" ColumnName="Pratikriya" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

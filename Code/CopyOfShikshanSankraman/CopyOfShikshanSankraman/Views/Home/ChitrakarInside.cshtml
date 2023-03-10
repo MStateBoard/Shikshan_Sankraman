@@ -1,0 +1,247 @@
+﻿@model CopyOfShikshanSankraman.Models.NewChitrakar_tbl
+
+@{
+    ViewBag.Title = "ChitrakarInside";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+@*<link href="~/Design/LekhakPage/WriterInside.css" rel="stylesheet" />*@
+
+
+<style>
+    .navbar-nav {
+        float: none;
+    }
+    input[type="text"] {
+        height: 30px;
+        width: 210px;
+    }
+</style>
+@if (TempData["Msg"] != null)
+{
+    <h4 style="color:red">@TempData["Msg"].ToString()</h4>
+}
+<h3 style="text-align: center; margin-top: 50px">चित्रे देण्यासाठी</h3>
+
+@using (Html.BeginForm("ChitrakarInside", "Home", FormMethod.Post, new{   enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="row" style="padding-left:100px;">
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FullName, "संपूर्ण नाव :", htmlAttributes: new { @class = "control-label" })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EmailId, "ई-मेल :", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MobileNo1, "मोबाईल १ :", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.MobileNo1, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MobileNo1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MobileNo2, "मोबाईल २ :", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.MobileNo2, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MobileNo2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AadharNo, "आधार नंबर :", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.AadharNo, new { htmlAttributes = new { @class = "form-control" } })
+
+                    @Html.ValidationMessageFor(model => model.AadharNo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ChitrachaVishay, "chitracha विषय :", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.ChitrachaVishay, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ChitrachaVishay, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ShaikshanikPatrata, "शैक्षणिक पात्रता:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.ShaikshanikPatrata, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ShaikshanikPatrata, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3" id="drop">
+                <label>कार्यालयाचा प्रकार :</label>
+                <span class="required" style="color:red;font-weight:bold">*</span>
+                @Html.DropDownListFor(model => model.KaryalayachaPrakar, new List<SelectListItem>
+                       {
+                           new SelectListItem { Text = "कार्यालय ", Value = "कार्यालय "},
+                           new SelectListItem { Text = "माध्यमिक शाळा", Value = "माध्यमिक शाळा"},
+                           new SelectListItem { Text = "कनिष्ठ महाविद्यालय", Value = "कनिष्ठ महाविद्यालय"},
+                           new SelectListItem { Text = "  वैयक्तिक", Value ="वैयक्तिक"},
+                        }, "-Select-", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+                @Html.ValidationMessageFor(model => model.KaryalayachaPrakar, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="col-md-3">
+                <label>प्रकार </label>
+                <span class="required" style="color:red;font-weight:bold">*</span>
+                <br />
+                @Html.DropDownListFor(model => model.VyavasayikSthan, new List<SelectListItem>
+                       {
+                           new SelectListItem { Text = "सेवारत ", Value = "सेवारत "},
+                           new SelectListItem { Text = "सेवानिवृत्त", Value = "सेवानिवृत्त"},
+
+                        }, "-Select-", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+                @Html.ValidationMessageFor(model => model.VyavasayikSthan, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="col-md-3">
+                <label>चित्र प्रकाशित झाले आहेत का?</label>
+                <span class="required" style="color:red;font-weight:bold">*</span>
+                <br />
+                @Html.DropDownListFor(model => model.ChitraPrakashanStatus, new List<SelectListItem>
+                       {
+                           new SelectListItem { Text = "होय ", Value = "होय"},
+                           new SelectListItem { Text = "नाही", Value = "नाही"},
+
+                        }, "-Select-", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+                @Html.ValidationMessageFor(model => model.ChitraPrakashanStatus, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Anubhav, "अनुभव:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.Anubhav, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Anubhav, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.KaryaratSthal, "कार्यरत स्थळ:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.KaryaratSthal, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.KaryaratSthal, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PrakashitChitra, "प्रकाशित चित्र:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.PrakashitChitra, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PrakashitChitra, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PrakashitKashyamadhe, "प्रकाशित कशामध्ये:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.PrakashitKashyamadhe, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PrakashitKashyamadhe, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Vishay, "विषय:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.Vishay, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Vishay, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AavadichaVishay, "आवडीचा विषय:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    @Html.EditorFor(model => model.AavadichaVishay, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AavadichaVishay, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Payment, "Payment:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    <input type="number" name="Payment"  id="Payment">
+                    @*@Html.EditorFor(model => model.Payment, new { htmlAttributes = new { @class = "form-control" } })*@
+                    @Html.ValidationMessageFor(model => model.Payment, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SamtiPatra, "संमती  पत्र :", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    <input type="file" id="SamtiPatra" name="SamtiPatraF" runat="server">
+                    @Html.ValidationMessageFor(model => model.SamtiPatra, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Chitra, "चित्र:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    <input type="file" id="Chitra" name="ChitraF">
+                    @Html.ValidationMessageFor(model => model.Chitra, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Chitra2, "चित्र 2:", htmlAttributes: new { @class = "control-label " })
+                    <span class="required" style="color:red;font-weight:bold">*</span>
+                    <input type="file" id="Chitra2" name="Chitra2F">
+                    @Html.ValidationMessageFor(model => model.Chitra2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="form-horizontal ">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <br /> <br /> <br />
+        <div class="form-group" align="center">
+
+            <div class="form-group">
+                <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" value="submit" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+
+        <div class="slogan" style="text-align:center">
+            <h4>समंती पत्र नमुना पाहण्यासाठी <a href="~/Design/CSS/chitrakar.pdf" target="_blank">क्लिक करावे.</a></h4>
+        </div>
+    </div>
+}
+
+
+
+

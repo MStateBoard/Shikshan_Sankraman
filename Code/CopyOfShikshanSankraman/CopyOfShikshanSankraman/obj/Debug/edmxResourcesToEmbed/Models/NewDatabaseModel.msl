@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NewDatabaseModelStoreContainer" CdmEntityContainer="NewDatabaseEntities1">
+    <EntitySetMapping Name="NewWriter_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.NewWriter_tbl">
+        <MappingFragment StoreEntitySet="NewWriter_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+          <ScalarProperty Name="LekhachaVishay" ColumnName="LekhachaVishay" />
+          <ScalarProperty Name="ShaikshanikPatrata" ColumnName="ShaikshanikPatrata" />
+          <ScalarProperty Name="KaryalayachaPrakar" ColumnName="KaryalayachaPrakar" />
+          <ScalarProperty Name="VyavasaikSthan" ColumnName="VyavasaikSthan" />
+          <ScalarProperty Name="LekhPrakashanStatus" ColumnName="LekhPrakashanStatus" />
+          <ScalarProperty Name="Anubhav" ColumnName="Anubhav" />
+          <ScalarProperty Name="KaryaratSthal" ColumnName="KaryaratSthal" />
+          <ScalarProperty Name="PrakashitLekh" ColumnName="PrakashitLekh" />
+          <ScalarProperty Name="PrakashitKashyamadhe" ColumnName="PrakashitKashyamadhe" />
+          <ScalarProperty Name="Vishay" ColumnName="Vishay" />
+          <ScalarProperty Name="AavadichaVishay" ColumnName="AavadichaVishay" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="SamtiPatra" ColumnName="SamtiPatra" />
+          <ScalarProperty Name="Lekh" ColumnName="Lekh" />
+          <ScalarProperty Name="Font" ColumnName="Font" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewChitrakar_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.NewChitrakar_tbl">
+        <MappingFragment StoreEntitySet="NewChitrakar_tbl">
+          <ScalarProperty Name="Chitra2" ColumnName="Chitra2" />
+          <ScalarProperty Name="Chitra" ColumnName="Chitra" />
+          <ScalarProperty Name="SamtiPatra" ColumnName="SamtiPatra" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="AavadichaVishay" ColumnName="AavadichaVishay" />
+          <ScalarProperty Name="Vishay" ColumnName="Vishay" />
+          <ScalarProperty Name="PrakashitKashyamadhe" ColumnName="PrakashitKashyamadhe" />
+          <ScalarProperty Name="PrakashitChitra" ColumnName="PrakashitChitra" />
+          <ScalarProperty Name="KaryaratSthal" ColumnName="KaryaratSthal" />
+          <ScalarProperty Name="Anubhav" ColumnName="Anubhav" />
+          <ScalarProperty Name="ChitraPrakashanStatus" ColumnName="ChitraPrakashanStatus" />
+          <ScalarProperty Name="VyavasayikSthan" ColumnName="VyavasayikSthan" />
+          <ScalarProperty Name="KaryalayachaPrakar" ColumnName="KaryalayachaPrakar" />
+          <ScalarProperty Name="ShaikshanikPatrata" ColumnName="ShaikshanikPatrata" />
+          <ScalarProperty Name="ChitrachaVishay" ColumnName="ChitrachaVishay" />
+          <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="School_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.School_tbl">
+        <MappingFragment StoreEntitySet="School_tbl">
+          <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+          <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+          <ScalarProperty Name="Vargani" ColumnName="Vargani" />
+          <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+          <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+          <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+          <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="IndexNo" ColumnName="IndexNo" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="SchoolAdd" ColumnName="SchoolAdd" />
+          <ScalarProperty Name="SansthechaPatta" ColumnName="SansthechaPatta" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="SansthecheNav" ColumnName="SansthecheNav" />
+          <ScalarProperty Name="Vargadar" ColumnName="Vargadar" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mahavidyalaya_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.Mahavidyalaya_tbl">
+        <MappingFragment StoreEntitySet="Mahavidyalaya_tbl">
+          <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+          <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+          <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+          <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+          <ScalarProperty Name="Vargani" ColumnName="Vargani" />
+          <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+          <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="IndexNo" ColumnName="IndexNo" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="SansthechaPatta" ColumnName="SansthechaPatta" />
+          <ScalarProperty Name="MahavidyalayacheNav" ColumnName="MahavidyalayacheNav" />
+          <ScalarProperty Name="SansthecheNav" ColumnName="SansthecheNav" />
+          <ScalarProperty Name="Vargadar" ColumnName="Vargadar" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewVarganidar_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.NewVarganidar_tbl">
+        <MappingFragment StoreEntitySet="NewVarganidar_tbl">
+          <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+          <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+          <ScalarProperty Name="Varagani" ColumnName="Varagani" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+          <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+          <ScalarProperty Name="AadharCardNo" ColumnName="AadharCardNo" />
+          <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+          <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="NearMark" ColumnName="NearMark" />
+          <ScalarProperty Name="RoadName" ColumnName="RoadName" />
+          <ScalarProperty Name="GharNav" ColumnName="GharNav" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pratikriya_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.Pratikriya_tbl">
+        <MappingFragment StoreEntitySet="Pratikriya_tbl">
+          <ScalarProperty Name="Pratikriya" ColumnName="Pratikriya" />
+          <ScalarProperty Name="Mahine" ColumnName="Mahine" />
+          <ScalarProperty Name="Varsh" ColumnName="Varsh" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.Contact_tbl">
+        <MappingFragment StoreEntitySet="Contact_tbl">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin_tbl1">
+      <EntityTypeMapping TypeName="NewDatabaseModel.Admin_tbl1">
+        <MappingFragment StoreEntitySet="Admin_tbl1">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="PdfUrl" ColumnName="PdfUrl" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_payment">
+      <EntityTypeMapping TypeName="NewDatabaseModel.Tbl_payment">
+        <MappingFragment StoreEntitySet="Tbl_payment">
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="bin_country" ColumnName="bin_country" />
+          <ScalarProperty Name="trans_date" ColumnName="trans_date" />
+          <ScalarProperty Name="billing_notes" ColumnName="billing_notes" />
+          <ScalarProperty Name="response_code" ColumnName="response_code" />
+          <ScalarProperty Name="retry" ColumnName="retry" />
+          <ScalarProperty Name="eci_value" ColumnName="eci_value" />
+          <ScalarProperty Name="mer_account" ColumnName="mer_account" />
+          <ScalarProperty Name="discount_value" ColumnName="discount_value" />
+          <ScalarProperty Name="offer_code" ColumnName="offer_code" />
+          <ScalarProperty Name="offer_type" ColumnName="offer_type" />
+          <ScalarProperty Name="vault" ColumnName="vault" />
+          <ScalarProperty Name="merchant_param5" ColumnName="merchant_param5" />
+          <ScalarProperty Name="merchant_param4" ColumnName="merchant_param4" />
+          <ScalarProperty Name="merchant_param3" ColumnName="merchant_param3" />
+          <ScalarProperty Name="merchant_param2" ColumnName="merchant_param2" />
+          <ScalarProperty Name="merchant_param1" ColumnName="merchant_param1" />
+          <ScalarProperty Name="delivery_tel" ColumnName="delivery_tel" />
+          <ScalarProperty Name="delivery_country" ColumnName="delivery_country" />
+          <ScalarProperty Name="delivery_zip" ColumnName="delivery_zip" />
+          <ScalarProperty Name="delivery_state" ColumnName="delivery_state" />
+          <ScalarProperty Name="delivery_city" ColumnName="delivery_city" />
+          <ScalarProperty Name="delivery_address" ColumnName="delivery_address" />
+          <ScalarProperty Name="delivery_name" ColumnName="delivery_name" />
+          <ScalarProperty Name="billing_email" ColumnName="billing_email" />
+          <ScalarProperty Name="billing_tel" ColumnName="billing_tel" />
+          <ScalarProperty Name="billing_country" ColumnName="billing_country" />
+          <ScalarProperty Name="billing_zip" ColumnName="billing_zip" />
+          <ScalarProperty Name="billing_state" ColumnName="billing_state" />
+          <ScalarProperty Name="billing_city" ColumnName="billing_city" />
+          <ScalarProperty Name="billing_address" ColumnName="billing_address" />
+          <ScalarProperty Name="billing_name" ColumnName="billing_name" />
+          <ScalarProperty Name="amount_money" ColumnName="amount_money" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="status_message" ColumnName="status_message" />
+          <ScalarProperty Name="status_code" ColumnName="status_code" />
+          <ScalarProperty Name="card_name" ColumnName="card_name" />
+          <ScalarProperty Name="payment_mode" ColumnName="payment_mode" />
+          <ScalarProperty Name="failure_message" ColumnName="failure_message" />
+          <ScalarProperty Name="order_status" ColumnName="order_status" />
+          <ScalarProperty Name="bank_ref_no" ColumnName="bank_ref_no" />
+          <ScalarProperty Name="tracking_id" ColumnName="tracking_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewKaryalay_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.NewKaryalay_tbl">
+        <MappingFragment StoreEntitySet="NewKaryalay_tbl">
+          <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+          <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+          <ScalarProperty Name="MonthEnd" ColumnName="MonthEnd" />
+          <ScalarProperty Name="MonthStart" ColumnName="MonthStart" />
+          <ScalarProperty Name="Vargani" ColumnName="Vargani" />
+          <ScalarProperty Name="VarganiDate" ColumnName="VarganiDate" />
+          <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+          <ScalarProperty Name="MobileNo1" ColumnName="MobileNo1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PincodeNo" ColumnName="PincodeNo" />
+          <ScalarProperty Name="Jhila" ColumnName="Jhila" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="NearMark" ColumnName="NearMark" />
+          <ScalarProperty Name="RoadName" ColumnName="RoadName" />
+          <ScalarProperty Name="GharNav" ColumnName="GharNav" />
+          <ScalarProperty Name="KaryalayacheNav" ColumnName="KaryalayacheNav" />
+          <ScalarProperty Name="VadilancheNav" ColumnName="VadilancheNav" />
+          <ScalarProperty Name="Nav" ColumnName="Nav" />
+          <ScalarProperty Name="SurnameOfHead" ColumnName="SurnameOfHead" />
+          <ScalarProperty Name="Vargadar" ColumnName="Vargadar" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Mandal">
+      <EntityTypeMapping TypeName="NewDatabaseModel.Tbl_Mandal">
+        <MappingFragment StoreEntitySet="Tbl_Mandal">
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="month" ColumnName="month" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="ino" ColumnName="ino" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registration_tbl">
+      <EntityTypeMapping TypeName="NewDatabaseModel.Registration_tbl">
+        <MappingFragment StoreEntitySet="Registration_tbl">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

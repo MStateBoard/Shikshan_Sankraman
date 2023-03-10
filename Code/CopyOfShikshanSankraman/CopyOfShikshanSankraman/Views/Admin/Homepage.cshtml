@@ -1,0 +1,428 @@
+﻿@model CopyOfShikshanSankraman.Models.Admin_tbl1
+@{
+    ViewBag.Title = "Homepage";
+}
+
+
+<!------------------------------------for uploading pdf -------------------------------------------------------------------------------->
+<script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+<script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+
+
+<!------------------------------------for uploading pdf -------------------------------------------------------------------------------->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href="~/Design/Admin/AdminHomepage.css" rel="stylesheet" />
+@*<link href="../Content/bootstrap.css" rel="stylesheet" />
+
+    <script src="../Scripts/jquery-1.11.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>*@
+<div id="UpdatePanel1">
+    @using (Html.BeginForm("AddData", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-5 increasewidth" id="Info">
+                    <div id="ui" class="uii">
+
+                        <form class="form-group ">
+
+                            <div class="row rowstyle">
+
+                                @Html.HiddenFor(x => x.Id)
+
+                                @*<input type="hidden" id="Id" name="Id" />*@
+                                <div class="col-lg-5 ">
+                                    <label>Year </label>
+                                    <select name="Year" id="Year" class="form-control">
+                                        <option>Select</option>
+                                        <option>2016</option>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option>2019</option>
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                        <option>2022</option>
+
+
+                                    </select>
+
+                                </div>
+                                <div class="col-lg-5 ">
+                                    <label>Month </label>
+                                    <select name="Month" id="Month" class="form-control">
+                                        <option>Select</option>
+                                        <option>जानेवारी</option>
+                                        <option>फेब्रुवारी</option>
+                                        <option>मार्च</option>
+                                        <option>एप्रिल</option>
+                                        <option>मे-जून</option>
+                                        <option>जूलै</option>
+                                        <option> अ‍ॅगस्ट</option>
+                                        <option>सप्टेंबर</option>
+                                        <option>ओक्टोबर</option>
+                                        <option>नोव्हेंबर</option>
+                                        <option>डिसेंबर</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div style="height:10px"></div>
+
+                            <div class="col-lg-5">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FileName, "Filename", htmlAttributes: new { @class = "control-label" })
+                                    <span class="required" style="color:red;font-weight:bold">*</span>
+                                    @Html.EditorFor(model => model.FileName, new { htmlAttributes = new { @class = "form-control" } })
+
+                                </div>
+                            </div>
+
+                            @*<div class="col-md-3">
+               <div class="form-group">
+                 @Html.LabelFor(model => model.Year, "Year", htmlAttributes: new { @class = "control-label" })
+                  <span class="required" style="color:red;font-weight:bold">*</span>
+                     @Html.EditorFor(model => model.Month, new { htmlAttributes = new { @class = "form-control" } })
+               @Html.ValidationMessageFor(model => model.Month, "Month", new { @class = "text-danger" })
+                      </div>
+        </div>*@
+                        <div class="row">
+                            <div class="col-lg-5">
+
+                            </div>
+                            <div class="col-lg-6">
+                                <label>PDF Url </label>
+                                <input type="file" name="PdfUrl" id="PdfUrl" />
+
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Image </label>
+                                <input type="file" name="Image" id="Image" />
+
+                            </div>
+
+                        </div>
+                           
+
+                            @*
+        <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate();"> Add</button>
+                     @*
+         <button style="margin-top:20px;" type="button" onclick="AddRow()">Submit</button>
+                            *@
+                            <button style="margin-top:20px;" id="add" type="submit">Submit</button>
+
+
+
+                        </form>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+
+
+</div>
+
+<div style="height:10px;"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2> </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <table id="productTable" class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Month</th>
+                        <th>IPAddress</th>
+                        <th>FileName</th>
+                        <th>DateTime</th>
+                        <th>PdfUrl</th>
+                        <th>Image</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="proddetails">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    //function Confirm() {
+    //    window.onload = function () {
+    //        var confirm_value = document.createElement("INPUT");
+    //        confirm_value.type = "hidden";
+    //        confirm_value.name = "confirm_value";
+    //        if (confirm("Do you want to replace existing file?")) {
+    //            confirm_value.value = "Yes";
+    //        } else {
+    //            confirm_value.value = "No";
+    //        }
+    //        document.forms[0].appendChild(confirm_value);
+    //        document.getElementById("<%=btnConfirm.ClientID %>").click();
+    //    }
+    //}
+
+    $(document).ready(function () {
+        BindProdTable();
+    });
+
+    //function jsondate_to_normaldate(jsondate) {
+    //    var dateString = jsondate.substr(6);
+    //    var currentTime = new Date(parseInt(dateString));
+    //    var month = currentTime.getMonth() + 1;
+    //    var day = currentTime.getDate();
+    //    var year = currentTime.getFullYear();
+
+    //    var hour = currentTime.getHours();
+    //    var min = currentTime.getMinutes();
+    //    var ampm = hour >= 12 ? 'PM' : 'AM';
+    //    var date = day + "-" + month + "-" + year + " " + hour + ":" + min + " " + ampm;
+    //    return date;
+    //}
+    //function fetchdate() {
+
+
+    //}
+
+    //----------------------------------------------------------------------------------------------------------------------------------------------
+    function BindProdTable() {
+        $('#proddetails tr').remove();
+        $.ajax({
+            type: "GET",
+            url: '/Admin/GetPrductDetails',
+            datatype: 'json',
+            success: function (data) {
+                if (data.Result) {
+                    var items = '';
+                    $.each(data.Response, function (i, item) {
+                        var rows = "<tr>" +
+                            "<td >" + item.Year + "</td>" +
+                            "<td >" + item.Month + "</td>" +
+                            "<td >" + item.IPAddress + "</td>" +
+                            "<td >" + item.FileName + "</td>" +
+                            /* "<td >" + jsondate_to_normaldate(item.DateTime) + "</td>" +*/
+                            "<td >" + item.DateTime + "</td>" +
+                            "<td >" + item.PdfUrl + "</td>" +
+                            "<td >" + item.Image + "</td>" +
+                            "<td >" + `<input type = "button" id="Edit" class = "btn btn-primary" value="Edit" onclick="EditByID(` + item.Id + `)"/>` + "</td>" +
+                            "<td >" + `<input type="button" id="Delete" class="btn btn-danger" value="Delete" onclick="DeleteByID(` + item.Id + `)"/>` + "</td>"
+                            + "</tr>";
+                        $('#proddetails').append(rows);
+                    });
+                }
+
+            },
+        });
+    }
+    //function getFilePath() {
+    //    $('input[type=file]').change(function () {
+    //        var filePath = $('#PdfUrl').val();
+    //       path = Path.Combine(Server.MapPath("~/Design"), random + Path.GetFileName(file.FileName));
+
+    //      file.SaveAs(path);
+
+    //       path = "~/Content/upload/" + Path.GetFileName(file.FileName);
+    //    });
+    //    return path;
+    //}
+    //function getFilePath() {
+    //    string filename = Path.GetFileName(PdfUrl.FileName);
+    //    PdfUrl.SaveAs(Server.MapPath("/Upload/PDF/" + filename));
+    //    string filepath = "/Upload/PDF/" + filename;
+    //    return filepath;
+    //}
+    
+       
+    //function getFilePath() {
+    //    $('input[type=file]').change(function () {
+    //        var filePath = $('#PdfUrl').val();
+    //    });
+
+
+
+
+
+    function EditByID(ID) {
+        $.ajax({
+            type: "GET",
+            url: '/Admin/GetProdByID',
+            datatype: 'json',
+            data: {
+                ID: ID
+            },
+            
+            success: function (data) {
+                if (data.Result) {
+                    debugger;
+                    $('#Id').val(ID);
+                    $('#Year').val(data.Response.Year);
+                    $('#Month').val(data.Response.Month);
+                    $('#IPAddress').val(data.Response.IPAddress);
+                    $('#FileName').val(data.Response.FileName);
+                    $('#DateTime').val(data.Response.DateTime);
+                    $('#PdfUrl').attr(data.Response.PdfUrl);
+                    $('#Image').attr(data.Response.Image);
+                    
+
+                }
+                else {
+                    BindProdTable();
+                    alert(data.Response);
+                }
+            },
+            
+        });
+    }
+
+
+
+
+    function DeleteByID(ID) {
+        $.ajax({
+            type: "POST",
+            url: '/Admin/DeleteProdByID',
+            datatype: 'json',
+            data: {
+                ID: ID
+            },
+            success: function (data) {
+                if (data.Result) {
+                    BindProdTable();
+                    alert(data.Response);
+                }
+                else {
+                    BindProdTable();
+                    alert(data.Response);
+                }
+            },
+        });
+    }
+
+   
+
+   
+
+@*
+    // Current product being edited
+    var editRow = null;
+
+    function productDisplay(ctl) {
+        editRow = $(ctl).parents("tr");
+        var cols = editRow.children("td");
+        // Change Update Button Text
+        $("#updateButton").text("Update");
+
+        $("#Year").val($(cols[1]).text());
+        $("#Month").val($(cols[2]).text());
+        $("#IPAddress").val($(cols[3]).text());
+        $("#FileName").val($(cols[4]).text());
+        $("#DateTime").val($(cols[5]).text());
+        $("#PdfUrl").val($(cols[6]).text());
+
+
+    }
+
+    function productUpdate() {
+        if ($("#updateButton").text() == "Update") {
+            productUpdateInTable();
+        }
+        else {
+            productAddToTable();
+        }
+
+        // Clear form fields
+        formClear();
+
+        // Focus to product name field
+        $("#Year").focus();
+    }
+
+    // Add product to <table>
+    function productAddToTable() {
+        // First check if a <tbody> tag exists, add one if not
+        if ($("#productTable tbody").length == 0) {
+            $("#productTable").append("<tbody></tbody>");
+        }
+
+        // Append product to table
+        $("#productTable tbody").append(
+            productBuildTableRow());
+    }
+
+    // Update product in <table>
+    function productUpdateInTable() {
+        // Add changed product to table
+        $(editRow).after(productBuildTableRow());
+
+        // Remove original product
+        $(editRow).remove();
+
+        // Clear form fields
+        formClear();
+
+        // Change Update Button Text
+        $("#updateButton").text("Add");
+    }
+
+    // Build a <table> row of Product data
+    function productBuildTableRow() {
+        var ret =
+            "<tr>" +
+            "<td>" +
+            "<button type='button' " + "onclick='productDisplay(this);' " + "class='btn btn-default'>Edit</button>" +
+            "</td>" +
+            "<td>" + $("#Year").val() + "</td>" +
+            "<td>" + $("#Month").val() + "</td>" +
+            "<td>" + $("#IPAddress").val() + "</td>" +
+            "<td>" + $("#FileName").val() + "</td>" +
+            "<td>" + $("#DateTime").val() + "</td>" +
+            "<td>" + $("#PdfUrl").val() + "</td>" +
+
+            "<td>" +
+            "<button type='button' " + "onclick='productDelete(this);' " + "class='btn btn-default'>Delete</button>" +
+            "</td>" +
+
+            "</tr>"
+
+        return ret;
+    }
+
+    // Delete product from <table>
+    function productDelete(ctl) {
+        $(ctl).parents("tr").remove();
+    }
+
+    // Clear form fields
+    function formClear() {
+        $("#Year").val("");
+        $("#Month").val("");
+        $("#IPAddress").val("");
+        $("#FileName").val("");
+        $("#DateTime").val("");
+        $("#PdfUrl").val("");
+    }
+*@
+</script>
+
+
+
+
